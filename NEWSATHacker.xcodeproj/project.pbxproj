@@ -13,6 +13,14 @@
 		42C5217A19D3E40F0036E862 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C5217919D3E40F0036E862 /* Images.xcassets */; };
 		42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C5217B19D3E40F0036E862 /* LaunchScreen.xib */; };
 		42C5218919D3E40F0036E862 /* NEWSATHackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5218819D3E40F0036E862 /* NEWSATHackerTests.swift */; };
+		42C5219319D3EE970036E862 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219219D3EE970036E862 /* background.jpg */; };
+		42C5219519D467BD0036E862 /* board1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219419D467BD0036E862 /* board1.png */; };
+		42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219619D49AF40036E862 /* sectionInfoView.xib */; };
+		42C5219919D49D860036E862 /* SectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5219819D49D860036E862 /* SectionsView.swift */; };
+		42C5219B19D506170036E862 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C5219A19D506170036E862 /* CoreGraphics.framework */; };
+		42C5219D19D507FF0036E862 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C5219C19D507FF0036E862 /* Foundation.framework */; };
+		42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775C19FC43D9000D5C73 /* Scroller.swift */; };
+		42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775E19FC43EE000D5C73 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,14 @@
 		42C5218219D3E40F0036E862 /* NEWSATHackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NEWSATHackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C5218719D3E40F0036E862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C5218819D3E40F0036E862 /* NEWSATHackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEWSATHackerTests.swift; sourceTree = "<group>"; };
+		42C5219219D3EE970036E862 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		42C5219419D467BD0036E862 /* board1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board1.png; sourceTree = "<group>"; };
+		42C5219619D49AF40036E862 /* sectionInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sectionInfoView.xib; sourceTree = "<group>"; };
+		42C5219819D49D860036E862 /* SectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsView.swift; sourceTree = "<group>"; };
+		42C5219A19D506170036E862 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		42C5219C19D507FF0036E862 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42D9775C19FC43D9000D5C73 /* Scroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroller.swift; sourceTree = "<group>"; };
+		42D9775E19FC43EE000D5C73 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C5219D19D507FF0036E862 /* Foundation.framework in Frameworks */,
+				42C5219B19D506170036E862 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,8 @@
 		42C5216419D3E40F0036E862 = {
 			isa = PBXGroup;
 			children = (
+				42C5219C19D507FF0036E862 /* Foundation.framework */,
+				42C5219A19D506170036E862 /* CoreGraphics.framework */,
 				42C5216F19D3E40F0036E862 /* NEWSATHacker */,
 				42C5218519D3E40F0036E862 /* NEWSATHackerTests */,
 				42C5216E19D3E40F0036E862 /* Products */,
@@ -78,10 +98,14 @@
 			isa = PBXGroup;
 			children = (
 				42C5217219D3E40F0036E862 /* AppDelegate.swift */,
+				42D9775C19FC43D9000D5C73 /* Scroller.swift */,
+				42D9775E19FC43EE000D5C73 /* MainViewController.swift */,
 				42C5217419D3E40F0036E862 /* ViewController.swift */,
 				42C5217619D3E40F0036E862 /* Main.storyboard */,
 				42C5217919D3E40F0036E862 /* Images.xcassets */,
 				42C5217B19D3E40F0036E862 /* LaunchScreen.xib */,
+				42C5219619D49AF40036E862 /* sectionInfoView.xib */,
+				42C5219819D49D860036E862 /* SectionsView.swift */,
 				42C5217019D3E40F0036E862 /* Supporting Files */,
 			);
 			path = NEWSATHacker;
@@ -90,6 +114,8 @@
 		42C5217019D3E40F0036E862 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42C5219219D3EE970036E862 /* background.jpg */,
+				42C5219419D467BD0036E862 /* board1.png */,
 				42C5217119D3E40F0036E862 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -161,6 +187,7 @@
 				TargetAttributes = {
 					42C5216C19D3E40F0036E862 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = Z52YC535HH;
 					};
 					42C5218119D3E40F0036E862 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -192,7 +219,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */,
+				42C5219519D467BD0036E862 /* board1.png in Resources */,
 				42C5217819D3E40F0036E862 /* Main.storyboard in Resources */,
+				42C5219319D3EE970036E862 /* background.jpg in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,
 				42C5217A19D3E40F0036E862 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42C5219919D49D860036E862 /* SectionsView.swift in Sources */,
 				42C5217519D3E40F0036E862 /* ViewController.swift in Sources */,
 				42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */,
+				42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */,
+				42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,9 +384,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -407,6 +446,7 @@
 				42C5218E19D3E40F0036E862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42C5218F19D3E40F0036E862 /* Build configuration list for PBXNativeTarget "NEWSATHackerTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +455,7 @@
 				42C5219119D3E40F0036E862 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
