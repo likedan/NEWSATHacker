@@ -4,7 +4,7 @@
 //
 //  Created by Kedan Li on 14-9-25.
 //  Copyright (c) 2014年 Kedan Li. All rights reserved.
-//lkjhlkjhkj
+// kjhgukhgkuhuh
 
 import UIKit
 import CoreGraphics
@@ -14,7 +14,12 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
     @IBOutlet var subjectBoard : UIScrollView!
     
     @IBOutlet var mainboard2 : UIView!
-
+    
+    @IBOutlet var mainboard : UIView!
+    @IBOutlet var math : UIButton!
+    @IBOutlet var writing : UIButton!
+    @IBOutlet var reading : UIButton!
+    @IBOutlet var sections : UIButton!
 
     @IBAction func mathTapped(sender : AnyObject) {
     
