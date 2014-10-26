@@ -32,7 +32,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
 
     @IBAction func mathTapped(sender : AnyObject) {
     
-
     
     }
     

@@ -42,18 +42,17 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
+        
+        //self.views[0].center = CGPointMake(self.views[0].center.x, self.views[0].center.y + self.contentOffset.x * 0.1)
+        
         self.views[0].alpha = (3.2 - scrollView.contentOffset.x * 0.01)/3.2
-        
-        self.views[0].center = CGPointMake(self.views[0].center.x, self.views[0].center.y + self.contentOffset.x * 0.1)
-        
-        var t1 = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.01, 1 - self.contentOffset.x * 0.01)
-        var t2 = CGAffineTransformMake(0.0, self.contentOffset.x * -0.01, self.contentOffset.x * -0.01, 0.0, self.frame.height, self.frame.width)
+        var t1 = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.0012, 1 - self.contentOffset.x * 0.0012)
+        var t2 = CGAffineTransformMakeTranslation(self.contentOffset.x * 0.1, 0)
+        //(0.0, self.contentOffset.x * -0.01, self.contentOffset.x * -0.01, 0.0, self.frame.height, self.frame.width)
         //var t2 = CGAffineTransformma(self.contentOffset.x/960 * -3.14)
-        //var t3 = CGAffineTransformMakeTranslation(0, self.contentOffset.x * 3)
+        var t3 = CGAffineTransformMakeRotation(self.contentOffset.x/1920 * -3.14)
 
-        
-        
-        self.views[0].transform = CGAffineTransformConcat(t1, t2)
+        self.views[0].transform = CGAffineTransformConcat(t1, CGAffineTransformConcat(t2, t3))
         
         
     }
