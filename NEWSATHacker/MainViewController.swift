@@ -15,13 +15,18 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mainBoard = Scroller(frame: CGRectMake(0, 60, 320, 450), numberOfViews: 3)
+        self.mainBoard = Scroller(frame: CGRectMake(0, 60, 320, 450), numberOfViews: 3)
         self.view.addSubview(self.mainBoard)
+        
         var cc = UIImageView(frame: CGRectMake(0, 0, 320, 450))
-        cc.image = UIImage(named: "background")
+        cc.image = UIImage(named: "HACKer")
+        var cc1 = UIImageView(frame: CGRectMake(0, 0, 320, 450))
+        cc1.image = UIImage(named: "HACKer")
+        var cc2 = UIImageView(frame: CGRectMake(0, 0, 320, 450))
+        cc2.image = UIImage(named: "HACKer")
         self.mainBoard.views[0].addSubview(cc)
-        //self.mainBoard.views[2].addSubview(cc)
-        //self.mainBoard.views[1].addSubview(cc)
+        self.mainBoard.views[2].addSubview(cc1)
+        self.mainBoard.views[1].addSubview(cc2)
 
         // Do any additional setup after loading the view.
     }

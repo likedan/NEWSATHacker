@@ -28,6 +28,9 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
             let swiper = UISwipeGestureRecognizer(target: self, action: Selector("changeBoard:"))
             swiper.delegate = self
             aview.addGestureRecognizer(swiper)
+            self.addSubview(aview)
+
+            self.delegate = self
             
             views.append(aview)
             
@@ -39,24 +42,45 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
+        self.views[0].alpha = (3.2 - scrollView.contentOffset.x * 0.01)/3.2
+        
+        self.views[0].center = CGPointMake(self.views[0].center.x, self.views[0].center.y + self.contentOffset.x * 0.1)
+        
+        var t1 = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.01, 1 - self.contentOffset.x * 0.01)
+        var t2 = CGAffineTransformMake(0.0, self.contentOffset.x * -0.01, self.contentOffset.x * -0.01, 0.0, self.frame.height, self.frame.width)
+        //var t2 = CGAffineTransformma(self.contentOffset.x/960 * -3.14)
+        //var t3 = CGAffineTransformMakeTranslation(0, self.contentOffset.x * 3)
+
+        
+        
+        self.views[0].transform = CGAffineTransformConcat(t1, t2)
+        
+        
     }
 
+    
     func changeBoard(gesture: UISwipeGestureRecognizer){
         
-        find(views, gesture.view!)
+        var theViewNum: Int = find(views, gesture.view!)!
         
-        /*
-        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-            self.subjectBoard.alpha = 0
-            self.subjectBoard.frame = CGRectMake(self.subjectBoard.frame.origin.x - 100, self.subjectBoard.frame.origin.y, self.subjectBoard.frame.width - 50, self.subjectBoard.frame.height - 50);
-            
-            self.math.frame = CGRectMake(20, 20, 20, 20)
-            
-            }
-            , completion: {
-                (value: Bool) in
+        if gesture.direction == UISwipeGestureRecognizerDirection.Right{
+            UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                self.views[theViewNum].alpha = 0
+                self.views[theViewNum].center = CGPointMake(self.views[theViewNum].center.x - self.frame.width, self.views[theViewNum].center.y)
                 
-        })*/
+                self.views[theViewNum].center = CGPointMake(self.views[theViewNum].center.x - self.frame.width, self.views[theViewNum].center.y)
+                
+                self.views[theViewNum].transform = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.1, 1 - self.contentOffset.x * 0.1)
+                self.views[theViewNum].transform = CGAffineTransformMakeRotation(self.contentOffset.x)
+                
+                }
+                , completion: {
+                    (value: Bool) in
+                    
+            })
+        }
+        
+
 
         
     }
