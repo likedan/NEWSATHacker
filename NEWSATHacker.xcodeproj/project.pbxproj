@@ -22,6 +22,12 @@
 		42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775C19FC43D9000D5C73 /* Scroller.swift */; };
 		42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775E19FC43EE000D5C73 /* MainViewController.swift */; };
 		42D9776119FC682E000D5C73 /* HACKer.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D9776019FC682E000D5C73 /* HACKer.png */; };
+		8850B0C319FC96E600D94FC0 /* DefaultViewSectionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0BD19FC96E600D94FC0 /* DefaultViewSectionButton.png */; };
+		8850B0C419FC96E600D94FC0 /* MoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0BE19FC96E600D94FC0 /* MoreIcon.png */; };
+		8850B0C519FC96E600D94FC0 /* SATHackerUI.psd in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0BF19FC96E600D94FC0 /* SATHackerUI.psd */; };
+		8850B0C619FC96E600D94FC0 /* SearchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0C019FC96E600D94FC0 /* SearchIcon.png */; };
+		8850B0C719FC96E600D94FC0 /* TabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0C119FC96E600D94FC0 /* TabBar.png */; };
+		8850B0C819FC96E600D94FC0 /* TopBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0C219FC96E600D94FC0 /* TopBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,12 @@
 		42D9775C19FC43D9000D5C73 /* Scroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroller.swift; sourceTree = "<group>"; };
 		42D9775E19FC43EE000D5C73 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42D9776019FC682E000D5C73 /* HACKer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HACKer.png; sourceTree = "<group>"; };
+		8850B0BD19FC96E600D94FC0 /* DefaultViewSectionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultViewSectionButton.png; path = ../Images/DefaultViewSectionButton.png; sourceTree = "<group>"; };
+		8850B0BE19FC96E600D94FC0 /* MoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MoreIcon.png; path = ../Images/MoreIcon.png; sourceTree = "<group>"; };
+		8850B0BF19FC96E600D94FC0 /* SATHackerUI.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = SATHackerUI.psd; path = ../Images/SATHackerUI.psd; sourceTree = "<group>"; };
+		8850B0C019FC96E600D94FC0 /* SearchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SearchIcon.png; path = ../Images/SearchIcon.png; sourceTree = "<group>"; };
+		8850B0C119FC96E600D94FC0 /* TabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabBar.png; path = ../Images/TabBar.png; sourceTree = "<group>"; };
+		8850B0C219FC96E600D94FC0 /* TopBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TopBar.png; path = ../Images/TopBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +131,12 @@
 				42D9776019FC682E000D5C73 /* HACKer.png */,
 				42C5219219D3EE970036E862 /* background.jpg */,
 				42C5219419D467BD0036E862 /* board1.png */,
+				8850B0BD19FC96E600D94FC0 /* DefaultViewSectionButton.png */,
+				8850B0BE19FC96E600D94FC0 /* MoreIcon.png */,
+				8850B0BF19FC96E600D94FC0 /* SATHackerUI.psd */,
+				8850B0C019FC96E600D94FC0 /* SearchIcon.png */,
+				8850B0C119FC96E600D94FC0 /* TabBar.png */,
+				8850B0C219FC96E600D94FC0 /* TopBar.png */,
 				42C5217119D3E40F0036E862 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -222,13 +240,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8850B0C319FC96E600D94FC0 /* DefaultViewSectionButton.png in Resources */,
+				8850B0C719FC96E600D94FC0 /* TabBar.png in Resources */,
 				42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */,
 				42C5219519D467BD0036E862 /* board1.png in Resources */,
 				42D9776119FC682E000D5C73 /* HACKer.png in Resources */,
 				42C5217819D3E40F0036E862 /* Main.storyboard in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
+				8850B0C819FC96E600D94FC0 /* TopBar.png in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,
 				42C5217A19D3E40F0036E862 /* Images.xcassets in Resources */,
+				8850B0C519FC96E600D94FC0 /* SATHackerUI.psd in Resources */,
+				8850B0C419FC96E600D94FC0 /* MoreIcon.png in Resources */,
+				8850B0C619FC96E600D94FC0 /* SearchIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

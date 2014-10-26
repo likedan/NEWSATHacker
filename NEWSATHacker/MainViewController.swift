@@ -8,9 +8,14 @@
 
 import UIKit
 
+
 class MainViewController: UIViewController {
 
     @IBOutlet var mainBoard : Scroller!
+    
+    
+    var imageView = UIImageView(frame: CGRectMake(100, 150, 150, 150));
+    var topBar = UIImage(named: "TopBar.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
