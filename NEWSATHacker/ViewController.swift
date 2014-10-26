@@ -5,8 +5,12 @@
 //  Created by Kedan Li on 14-9-25.
 //  Copyright (c) 2014年 Kedan Li. All rights reserved.
 // kjhgukhgkuhuh
+<<<<<<< HEAD
 //eafraerfaef
 
+=======
+//llllllll
+>>>>>>> FETCH_HEAD
 import UIKit
 import CoreGraphics
 
