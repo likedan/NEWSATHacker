@@ -38,7 +38,7 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
         
         var t1 = CGAffineTransformMakeScale(1 - 0.32, 1 - 0.32)
         var t2 = CGAffineTransformMakeTranslation(0, 32)
-        var t3 = CGAffineTransformMakeRotation(1/6 * -3.14)
+        var t3 = CGAffineTransformMakeRotation(1/6 * 3.14)
         
         self.views[1].transform = CGAffineTransformConcat(t1, CGAffineTransformConcat(t2, t3))
         self.views[1].alpha = 0
@@ -63,7 +63,7 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
         self.views[1].alpha = (1 - 0.32 + scrollView.contentOffset.x * 0.01)/3.2
         var t4 = CGAffineTransformMakeScale(1 - 0.32 + self.contentOffset.x * 0.001, 1 - 0.32 + self.contentOffset.x * 0.001)
         var t5 = CGAffineTransformMakeTranslation(0, 32 - self.contentOffset.x * 0.1)
-        var t6 = CGAffineTransformMakeRotation(self.contentOffset.x/1920 * 3.14)
+        var t6 = CGAffineTransformMakeRotation(1/6 * 3.14 - self.contentOffset.x/1920 * 3.14)
         
         self.views[1].transform = CGAffineTransformConcat(t4, CGAffineTransformConcat(t5, t6))
         
