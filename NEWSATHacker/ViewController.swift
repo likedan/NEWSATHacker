@@ -6,7 +6,11 @@
 //  Copyright (c) 2014年 Kedan Li. All rights reserved.
 // kjhgukhgkuhuh
 
+<<<<<<< HEAD
 
+=======
+//llllllll
+>>>>>>> FETCH_HEAD
 import UIKit
 import CoreGraphics
 
@@ -24,7 +28,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
 
     @IBAction func mathTapped(sender : AnyObject) {
     
-
     
     }
     

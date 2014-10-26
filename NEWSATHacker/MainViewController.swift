@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mainBoard = Scroller(frame: CGRectMake(0, 60, 320, 450), numberOfViews: 3)
+        self.mainBoard = Scroller(frame: CGRectMake(0, 40, 320, 450), numberOfViews: 3)
         self.view.addSubview(self.mainBoard)
         
         var cc = UIImageView(frame: CGRectMake(0, 0, 320, 450))

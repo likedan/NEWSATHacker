@@ -36,25 +36,36 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
             
         }
         
+        var t1 = CGAffineTransformMakeScale(1 - 0.32, 1 - 0.32)
+        var t2 = CGAffineTransformMakeTranslation(0, 32)
+        var t3 = CGAffineTransformMakeRotation(1/6 * 3.14)
+        
+        self.views[1].transform = CGAffineTransformConcat(t1, CGAffineTransformConcat(t2, t3))
+        self.views[1].alpha = 0
+        
         self.contentSize = CGSizeMake(frame.width * CGFloat(numberOfViews), frame.height)
         
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
+        
+        //self.views[0].center = CGPointMake(self.views[0].center.x, self.views[0].center.y + self.contentOffset.x * 0.1)
+        
         self.views[0].alpha = (3.2 - scrollView.contentOffset.x * 0.01)/3.2
-        
-        self.views[0].center = CGPointMake(self.views[0].center.x, self.views[0].center.y + self.contentOffset.x * 0.1)
-        
-        var t1 = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.01, 1 - self.contentOffset.x * 0.01)
-        var t2 = CGAffineTransformMake(0.0, self.contentOffset.x * -0.01, self.contentOffset.x * -0.01, 0.0, self.frame.height, self.frame.width)
-        //var t2 = CGAffineTransformma(self.contentOffset.x/960 * -3.14)
-        //var t3 = CGAffineTransformMakeTranslation(0, self.contentOffset.x * 3)
+        var t1 = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.001, 1 - self.contentOffset.x * 0.001)
+        var t2 = CGAffineTransformMakeTranslation(0, self.contentOffset.x * 0.1)
+        var t3 = CGAffineTransformMakeRotation(self.contentOffset.x/1920 * -3.14)
 
+        self.views[0].transform = CGAffineTransformConcat(t1, CGAffineTransformConcat(t2, t3))
         
         
-        self.views[0].transform = CGAffineTransformConcat(t1, t2)
+        self.views[1].alpha = (1 - 0.32 + scrollView.contentOffset.x * 0.01)/3.2
+        var t4 = CGAffineTransformMakeScale(1 - 0.32 + self.contentOffset.x * 0.001, 1 - 0.32 + self.contentOffset.x * 0.001)
+        var t5 = CGAffineTransformMakeTranslation(0, 32 - self.contentOffset.x * 0.1)
+        var t6 = CGAffineTransformMakeRotation(1/6 * 3.14 - self.contentOffset.x/1920 * 3.14)
         
+        self.views[1].transform = CGAffineTransformConcat(t4, CGAffineTransformConcat(t5, t6))
         
     }
 
