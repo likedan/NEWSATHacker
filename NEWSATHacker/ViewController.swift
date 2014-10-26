@@ -6,8 +6,12 @@
 //  Copyright (c) 2014年 Kedan Li. All rights reserved.
 // kjhgukhgkuhuh
 <<<<<<< HEAD
+<<<<<<< HEAD
 //eafraerfaef
 
+=======
+//llllllll
+>>>>>>> FETCH_HEAD
 =======
 //llllllll
 >>>>>>> FETCH_HEAD
