@@ -6,11 +6,7 @@
 //  Copyright (c) 2014年 Kedan Li. All rights reserved.
 // kjhgukhgkuhuh
 
-<<<<<<< HEAD
 
-=======
-//llllllll
->>>>>>> FETCH_HEAD
 import UIKit
 import CoreGraphics
 
@@ -38,7 +34,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-    
+/*
         self.subjectBoard.contentSize = CGSizeMake(1000, self.subjectBoard.frame.size.height)
         self.subjectBoard.scrollEnabled = true;
         self.subjectBoard.userInteractionEnabled = true;
@@ -46,8 +42,10 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         let swiper = UISwipeGestureRecognizer(target: self, action: Selector("changeBoard:"))
         swiper.delegate = self
         self.subjectBoard.addGestureRecognizer(swiper)
-        
+        self.subjectBoard.s
         self.mainboard2.transform = CGAffineTransformMakeScale(0.8, 0.8)
+*/
+
         /*
         UIView.animateWithDuration(2.0) {
             self.subjectBoard.transform = CGAffineTransformMakeScale(0.8, 0.8)

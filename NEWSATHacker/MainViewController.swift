@@ -8,18 +8,13 @@
 
 import UIKit
 
-
 class MainViewController: UIViewController {
-
+    
     @IBOutlet var mainBoard : Scroller!
-    
-    
-    var imageView = UIImageView(frame: CGRectMake(100, 150, 150, 150));
-    var topBar = UIImage(named: "TopBar.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         self.mainBoard = Scroller(frame: CGRectMake(0, 40, 320, 450), numberOfViews: 3)
         self.view.addSubview(self.mainBoard)
         
@@ -32,24 +27,26 @@ class MainViewController: UIViewController {
         self.mainBoard.views[0].addSubview(cc)
         self.mainBoard.views[2].addSubview(cc1)
         self.mainBoard.views[1].addSubview(cc2)
-
+        */
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(red: 233.0/255, green: 231.0/255, blue: 215.0/255, alpha: 1)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
