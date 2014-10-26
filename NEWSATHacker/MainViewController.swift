@@ -29,7 +29,7 @@ class MainViewController: UIViewController {
         self.mainBoard.views[1].addSubview(cc2)
         */
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(red: 233.0/255, green: 231.0/255, blue: 215.0/255, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
         
     }
     
