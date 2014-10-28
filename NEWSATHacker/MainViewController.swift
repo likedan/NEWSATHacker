@@ -10,26 +10,29 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet var mainBoard : Scroller!
+    @IBOutlet var top : UIView!
+
+    @IBOutlet var bottom : UIView!
+
+    @IBOutlet var mainBoard : MathWritingReading!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        self.mainBoard = Scroller(frame: CGRectMake(0, 40, 320, 450), numberOfViews: 3)
+        
+        self.mainBoard = MathWritingReading(frame: CGRectMake(0, 75, 320, 450))
+        self.mainBoard.userInteractionEnabled = true
         self.view.addSubview(self.mainBoard)
         
-        var cc = UIImageView(frame: CGRectMake(0, 0, 320, 450))
-        cc.image = UIImage(named: "HACKer")
-        var cc1 = UIImageView(frame: CGRectMake(0, 0, 320, 450))
-        cc1.image = UIImage(named: "HACKer")
-        var cc2 = UIImageView(frame: CGRectMake(0, 0, 320, 450))
-        cc2.image = UIImage(named: "HACKer")
-        self.mainBoard.views[0].addSubview(cc)
-        self.mainBoard.views[2].addSubview(cc1)
-        self.mainBoard.views[1].addSubview(cc2)
-        */
+        self.mainBoard.math.addTarget(self, action: "mathClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+        
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
+        
+    }
+    
+    @IBAction func mathClicked(sender: AnyObject){
+        
+        self.mainBoard.chosen()
         
     }
     

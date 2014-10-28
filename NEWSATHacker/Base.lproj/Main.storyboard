@@ -15,6 +15,7 @@
                             <view contentMode="scaleToFill" id="xxY-Xp-Mid" userLabel="SectionView">
                                 <rect key="frame" x="0.0" y="75" width="320" height="438"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+<<<<<<< Updated upstream
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultViewSectionButton.png" id="PAd-EY-f56">
                                         <rect key="frame" x="8" y="153" width="304" height="111"/>
@@ -50,6 +51,8 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                 </subviews>
+=======
+>>>>>>> Stashed changes
                             </view>
                             <view contentMode="scaleToFill" id="HBU-sp-l9v" userLabel="TabBarView">
                                 <rect key="frame" x="0.0" y="510" width="320" height="58"/>
@@ -218,7 +221,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DefaultViewSectionButton.png" width="600" height="200"/>
         <image name="MoreIcon.png" width="64" height="47"/>
         <image name="TabBar.png" width="640" height="125"/>
         <image name="TopBar.png" width="640" height="162"/>

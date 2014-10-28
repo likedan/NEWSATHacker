@@ -9,66 +9,130 @@
 
 import UIKit
 
-class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
+class Scroller: UIView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
 
     var currentView: Int!
     var views : [UIView]!
     
     init(frame: CGRect, numberOfViews: Int) {
         
-        super.init(frame: frame)
+    
+        super.init(frame: CGRectMake(0, 0, frame.width * CGFloat(numberOfViews), frame.height))
+        
+        currentView = 1
         
         views = [UIView]()
         
         for var index = 0; index < numberOfViews; index++ {
          
             var aview = UIView(frame: frame)
-            aview.frame = CGRectMake(frame.origin.x + CGFloat(index) * frame.width, frame.origin.y, frame.width, frame.height)
             
             let swiper = UISwipeGestureRecognizer(target: self, action: Selector("changeBoard:"))
             swiper.delegate = self
             aview.addGestureRecognizer(swiper)
-            self.addSubview(aview)
-
-            self.delegate = self
+            
+            let dragger = UIPanGestureRecognizer(target: self, action: Selector("moveBoard:"))
+            dragger.delegate = self
+            aview.addGestureRecognizer(dragger)
             
             views.append(aview)
             
         }
         
-        var t1 = CGAffineTransformMakeScale(1 - 0.32, 1 - 0.32)
-        var t2 = CGAffineTransformMakeTranslation(0, 32)
-        var t3 = CGAffineTransformMakeRotation(1/6 * 3.14)
-        
-        self.views[1].transform = CGAffineTransformConcat(t1, CGAffineTransformConcat(t2, t3))
-        self.views[1].alpha = 0
-        
-        self.contentSize = CGSizeMake(frame.width * CGFloat(numberOfViews), frame.height)
+        self.setToCenter(views[0])
+
+        self.setToRight(views[1])
         
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func setToRight(view: UIView){
         
+        view.frame = CGRectMake(self.frame.width, 75 - 32, self.frame.width, self.frame.height)
         
-        //self.views[0].center = CGPointMake(self.views[0].center.x, self.views[0].center.y + self.contentOffset.x * 0.1)
+        var t1 = CGAffineTransformMakeScale(1 - 0.32, 1 - 0.32)
+        var t2 = CGAffineTransformMakeRotation(1/6 * 3.14)
         
-        self.views[0].alpha = (3.2 - scrollView.contentOffset.x * 0.01)/3.2
-        var t1 = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.001, 1 - self.contentOffset.x * 0.001)
-        var t2 = CGAffineTransformMakeTranslation(0, self.contentOffset.x * 0.1)
-        var t3 = CGAffineTransformMakeRotation(self.contentOffset.x/1920 * -3.14)
-
-        self.views[0].transform = CGAffineTransformConcat(t1, CGAffineTransformConcat(t2, t3))
+        view.transform = CGAffineTransformConcat(t1, t2)
+        view.alpha = 0
         
-        
-        self.views[1].alpha = (1 - 0.32 + scrollView.contentOffset.x * 0.01)/3.2
-        var t4 = CGAffineTransformMakeScale(1 - 0.32 + self.contentOffset.x * 0.001, 1 - 0.32 + self.contentOffset.x * 0.001)
-        var t5 = CGAffineTransformMakeTranslation(0, 32 - self.contentOffset.x * 0.1)
-        var t6 = CGAffineTransformMakeRotation(1/6 * 3.14 - self.contentOffset.x/1920 * 3.14)
-        
-        self.views[1].transform = CGAffineTransformConcat(t4, CGAffineTransformConcat(t5, t6))
+        self.addSubview(view)
         
     }
+    
+    func setToLeft(view: UIView){
+        
+        view.frame = CGRectMake(-self.frame.width, 75 - 32, self.frame.width, self.frame.height)
+        
+        var t1 = CGAffineTransformMakeScale(1 - 0.32, 1 - 0.32)
+        var t2 = CGAffineTransformMakeRotation(1/6 * -3.14)
+        
+        view.transform = CGAffineTransformConcat(t1, t2)
+        view.alpha = 0
+        
+        self.addSubview(view)
 
+    }
+    
+    func setToCenter(theView: UIView){
+        
+        theView.frame = CGRectMake(0, 75, self.frame.width, self.frame.height)
+        
+        var t1 = CGAffineTransformMakeScale(1, 1)
+        var t2 = CGAffineTransformMakeRotation(0)
+        
+        theView.transform = CGAffineTransformConcat(t1, t2)
+        theView.alpha = 1
+        
+        self.addSubview(theView)
+        
+    }
+    
+    func moveBoard(gesture: UIPanGestureRecognizer){
+    
+        var transition = gesture.translationInView(self).x
+
+        var index = find(views, gesture.view!)
+        
+        if index > -1{
+            
+            if transition <= 0{
+                
+                self.views[0].alpha = (transition * 0.01)/3.2 + 1
+                var t1 = CGAffineTransformMakeScale(1 + transition * 0.001, 1 + transition * 0.001)
+                //var t2 = CGAffineTransformMakeTranslation(transition, -transition * 0.1)
+                var t3 = CGAffineTransformMakeRotation(transition / 1920 * 3.14)
+                
+                self.views[0].transform = CGAffineTransformConcat(t1, t3)//CGAffineTransformConcat(t2, t3))
+                
+                
+                self.views[1].alpha = (transition * 0.01)/3.2
+                var t4 = CGAffineTransformMakeScale(1 - 0.32 - transition * 0.001, 1 - 0.32 - transition * 0.001)
+                var t5 = CGAffineTransformMakeTranslation(transition, 32 + transition * 0.1)
+                var t6 = CGAffineTransformMakeRotation(1/6 * 3.14 + transition / 1920 * 3.14)
+                
+                self.views[1].transform = CGAffineTransformConcat(t4, t6)//CGAffineTransformConcat(t5, t6))
+                
+            }else{
+                
+                UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                    
+                    self.setToCenter(self.views[index!])
+                    //self.setToLeft(self.views[index! - 1])
+                    
+
+                    }
+                    , completion: {
+                        (value: Bool) in
+                        
+                        
+                        
+                })
+                
+            }
+        }
+    }
+
+    
     
     func changeBoard(gesture: UISwipeGestureRecognizer){
         
@@ -81,9 +145,7 @@ class Scroller: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate{
                 
                 self.views[theViewNum].center = CGPointMake(self.views[theViewNum].center.x - self.frame.width, self.views[theViewNum].center.y)
                 
-                self.views[theViewNum].transform = CGAffineTransformMakeScale(1 - self.contentOffset.x * 0.1, 1 - self.contentOffset.x * 0.1)
-                self.views[theViewNum].transform = CGAffineTransformMakeRotation(self.contentOffset.x)
-                
+                               
                 }
                 , completion: {
                     (value: Bool) in
