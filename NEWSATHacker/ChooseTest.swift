@@ -11,13 +11,15 @@ import UIKit
 class ChooseTest: UIViewController {
 
     @IBOutlet var scroller : UIScrollView!
+    @IBOutlet var stateButton : UIView!
     
     var chapters:[String:AnyObject] = [String:AnyObject]()
     
     var currentStatus:[AnyObject] = [AnyObject]()
+
+    var stateButtons:[AnyObject] = [AnyObject]()
     
     var level: Int = 0
-    
     
     
     override func viewDidLoad() {
@@ -51,9 +53,78 @@ class ChooseTest: UIViewController {
         
     }
     
+    func createStateButton(){
+        
+        for (var index = 0; index < currentStatus.count; index++){
+            
+            
+            var label = UILabel(frame: CGRectMake(0, 0, 10, stateButton.frame.height))
+            label.text = currentStatus[index] as? String
+            label.font = UIFont(name: "AvenirNext-Medium", size: 20)
+            label.textAlignment = NSTextAlignment.Center
+            label.textColor = UIColor.whiteColor()
+            label.sizeToFit()
+            label.alpha = 0
+
+            if stateButtons.count == 0 {
+            
+                var button = UIButton(frame: CGRectMake(310 - label.frame.width, 0, label.frame.width, label.frame.height))
+                button.addTarget(self, action: "returnButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+                button.addSubview(label)
+                stateButton.addSubview(button)
+                stateButtons.append(button)
+                
+            }else{
+                
+                var button = UIButton(frame: CGRectMake((stateButtons[stateButtons.count - 1] as UIView).frame.origin.x - label.frame.width - 10, 0, label.frame.width, label.frame.height))
+                button.addTarget(self, action: "returnButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+                button.addSubview(label)
+                stateButton.addSubview(button)
+                stateButtons.append(button)
+
+                var img = UIImageView(frame: CGRectMake(button.frame.width + button.frame.origin.x, 8, 10, 10))
+                img.image = UIImage(named:"backWhite")
+                stateButton.addSubview(img)
+                
+            }
+            var delay: NSTimeInterval = NSTimeInterval(index) * 0.2
+            
+            UIView.animateWithDuration(0.2, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                
+                label.alpha = 1
+                
+                }
+                , completion: {
+                    (value: Bool) in
+            })
+
+
+        }
+    }
+    
+    func changeStateButton(){
+        
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            
+            self.stateButton.alpha = 0
+            
+            }
+            , completion: {
+                (value: Bool) in
+                for item in self.stateButton.subviews{
+                    item.removeFromSuperview()
+                }
+                self.stateButtons = [AnyObject]()
+                self.createStateButton()
+                self.stateButton.alpha = 1
+
+        })
+        
+    }
+    
     func addButtons(number: Int, arr: [AnyObject]){
         
-        var angle = CGAffineTransformMakeRotation(0.22);
+        var angle = CGAffineTransformMakeRotation(0.242);
         
         var button = UIButton(frame: CGRectMake(320, 80 + 90 * CGFloat(number), 260, 90))
         button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -74,27 +145,44 @@ class ChooseTest: UIViewController {
         scroller.addSubview(button)
 
         
-        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
             button.frame = CGRectMake(60, 10 + 90 * CGFloat(number), 260, 90)
             
             }
             , completion: {
                 (value: Bool) in
-                self.scroller.contentSize = CGSizeMake(self.scroller.frame.width, button.frame.origin.y + button.frame.height)
+                self.scroller.contentSize = CGSizeMake(self.scroller.frame.width, button.frame.origin.y + button.frame.height + 20)
                 if number < arr.count - 1{
                     self.addButtons(number + 1, arr: arr)
                 }
-                println(button.frame.origin.y + button.frame.height)
         })
         
+    }
+    
+    @IBAction func returnButtonClicked(sender: AnyObject){
+    
+        for (var index = currentStatus.count - 1; index >= 0; index--){
+            println(currentStatus[index])
+            println((sender.subviews[0] as UILabel).text!)
+            if currentStatus[index] as String == (sender.subviews[0] as UILabel).text!{
+                currentStatus.removeAtIndex(index);
+                break;
+            }else{
+                currentStatus.removeAtIndex(index);
+            }
+        }
+        
+        disappearButtons()
+        self.changeStateButton()
+
     }
     
     @IBAction func buttonClicked(sender: AnyObject){
         
         currentStatus.append((sender.subviews[1] as UILabel).text!)
         self.disappearButtons()
-        
+        self.changeStateButton()
     }
     
     func disappearButtons(){

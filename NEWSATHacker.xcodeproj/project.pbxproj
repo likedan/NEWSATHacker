@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3D1A03593A0070E2DD /* backWhite.png */; };
 		42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5217219D3E40F0036E862 /* AppDelegate.swift */; };
 		42C5217519D3E40F0036E862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5217419D3E40F0036E862 /* ViewController.swift */; };
 		42C5217819D3E40F0036E862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C5217619D3E40F0036E862 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42C34A3D1A03593A0070E2DD /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
 		42C5216D19D3E40F0036E862 /* NEWSATHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEWSATHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C5217119D3E40F0036E862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C5217219D3E40F0036E862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		42C5217019D3E40F0036E862 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42C34A3D1A03593A0070E2DD /* backWhite.png */,
 				42C9EFE11A02C68E00617E45 /* more.png */,
 				42D9776019FC682E000D5C73 /* HACKer.png */,
 				42C9EFE51A02CD7600617E45 /* triangularButton.png */,
@@ -253,6 +256,7 @@
 				42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */,
 				42D9776119FC682E000D5C73 /* HACKer.png in Resources */,
 				42C5217819D3E40F0036E862 /* Main.storyboard in Resources */,
+				42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */,
 				42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,

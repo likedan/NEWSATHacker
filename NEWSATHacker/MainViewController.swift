@@ -21,7 +21,7 @@ class MainViewController: UIViewController {
         
        
         //Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
+        //self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
         
     }
     
