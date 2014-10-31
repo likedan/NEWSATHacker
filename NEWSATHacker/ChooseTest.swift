@@ -25,54 +25,67 @@ class ChooseTest: UIViewController {
         
         chapters = DataManager.getChapInfo()
         
-        println(chapters)
-        
-        initializeViews(chapters.keys.array)
+        initializeButtons()
         
         // Do any additional setup after loading the view.
     }
 
-    func initializeViews(arr: [AnyObject]){
+    func initializeButtons(){
         
-        self.addButtons(0, arr: arr)
+        self.scroller.alpha = 1
+        
+        if chapters.count == 0{
+            println(chapters.keys.array)
+            self.addButtons(0, arr: chapters.keys.array)
+        }else{
+            
+            var array: AnyObject = chapters
+            
+            for (var index = 0; index < currentStatus.count; index++){
+                array = array[currentStatus[index] as String]!!
+            }
+
+            self.addButtons(0, arr: (array as [String: AnyObject]).keys.array)
+            
+        }
         
     }
     
     func addButtons(number: Int, arr: [AnyObject]){
         
-        println(arr[number])
-        
-        var button = UIButton(frame: CGRectMake(0, -80, 320, 90))
-        button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        var line = UIImageView(frame: CGRectMake(60, 75, 290, 4))
-        line.backgroundColor = UIColor.whiteColor()
         var angle = CGAffineTransformMakeRotation(0.22);
-        angle = CGAffineTransformTranslate(angle, 0, 0);
-        button.transform = angle
+        
+        var button = UIButton(frame: CGRectMake(320, 80 + 90 * CGFloat(number), 260, 90))
+        button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+
+        var line = UIImageView(frame: CGRectMake(-0, 80, 290, 4))
+        line.backgroundColor = UIColor.whiteColor()
+        line.transform = angle
         button.addSubview(line)
         
-        var label = UILabel(frame: CGRectMake(0, 0, 304, 110))
+        var label = UILabel(frame: CGRectMake(-60, 0, 304, 110))
         label.text = arr[number] as? String
         label.font = UIFont(name: "AvenirNext-Medium", size: 32)
         label.textAlignment = NSTextAlignment.Right
         label.textColor = UIColor.whiteColor()
-        
+        label.transform = angle
+
         button.addSubview(label)
-        
         scroller.addSubview(button)
 
         
-        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
-            button.frame = CGRectMake(0, 10 + 90 * CGFloat(number), 320, 90)
+            button.frame = CGRectMake(60, 10 + 90 * CGFloat(number), 260, 90)
             
             }
             , completion: {
                 (value: Bool) in
+                self.scroller.contentSize = CGSizeMake(self.scroller.frame.width, button.frame.origin.y + button.frame.height)
                 if number < arr.count - 1{
                     self.addButtons(number + 1, arr: arr)
                 }
+                println(button.frame.origin.y + button.frame.height)
         })
         
     }
@@ -80,21 +93,25 @@ class ChooseTest: UIViewController {
     @IBAction func buttonClicked(sender: AnyObject){
         
         currentStatus.append((sender.subviews[1] as UILabel).text!)
+        self.disappearButtons()
         
     }
     
-    func disappearButton(){
+    func disappearButtons(){
         
-        UIView.animateWithDuration(0.5, delay: 0.3, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
             self.scroller.alpha = 0
             
             }
             , completion: {
                 (value: Bool) in
-               
+                for item in self.scroller.subviews{
+                    item.removeFromSuperview()
+                }
+                self.initializeButtons()
         })
-        
+ 
     }
 
     
