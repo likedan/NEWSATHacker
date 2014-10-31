@@ -14,21 +14,20 @@
 		42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C5217B19D3E40F0036E862 /* LaunchScreen.xib */; };
 		42C5218919D3E40F0036E862 /* NEWSATHackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5218819D3E40F0036E862 /* NEWSATHackerTests.swift */; };
 		42C5219319D3EE970036E862 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219219D3EE970036E862 /* background.jpg */; };
-		42C5219519D467BD0036E862 /* board1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219419D467BD0036E862 /* board1.png */; };
 		42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219619D49AF40036E862 /* sectionInfoView.xib */; };
 		42C5219919D49D860036E862 /* SectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5219819D49D860036E862 /* SectionsView.swift */; };
 		42C5219B19D506170036E862 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C5219A19D506170036E862 /* CoreGraphics.framework */; };
 		42C5219D19D507FF0036E862 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C5219C19D507FF0036E862 /* Foundation.framework */; };
+		42C9EFE21A02C68E00617E45 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C9EFE11A02C68E00617E45 /* more.png */; };
+		42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C9EFE31A02CA8100617E45 /* whiteslide.png */; };
+		42C9EFE61A02CD7600617E45 /* triangularButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C9EFE51A02CD7600617E45 /* triangularButton.png */; };
+		42C9EFE91A02FA8700617E45 /* NewsBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C9EFE81A02FA8700617E45 /* NewsBoard.swift */; };
+		42C9EFEB1A02FBEB00617E45 /* ChooseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C9EFEA1A02FBEB00617E45 /* ChooseTest.swift */; };
+		42C9EFED1A02FF1900617E45 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C9EFEC1A02FF1900617E45 /* DataManager.swift */; };
+		42C9EFEF1A02FF3300617E45 /* Chapters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42C9EFEE1A02FF3300617E45 /* Chapters.plist */; };
 		42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775C19FC43D9000D5C73 /* Scroller.swift */; };
 		42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775E19FC43EE000D5C73 /* MainViewController.swift */; };
 		42D9776119FC682E000D5C73 /* HACKer.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D9776019FC682E000D5C73 /* HACKer.png */; };
-		42F2208C19FDF3FC00305E51 /* MathWritingReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2208B19FDF3FC00305E51 /* MathWritingReading.swift */; };
-		8850B0C319FC96E600D94FC0 /* DefaultViewSectionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0BD19FC96E600D94FC0 /* DefaultViewSectionButton.png */; };
-		8850B0C419FC96E600D94FC0 /* MoreIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0BE19FC96E600D94FC0 /* MoreIcon.png */; };
-		8850B0C519FC96E600D94FC0 /* SATHackerUI.psd in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0BF19FC96E600D94FC0 /* SATHackerUI.psd */; };
-		8850B0C619FC96E600D94FC0 /* SearchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0C019FC96E600D94FC0 /* SearchIcon.png */; };
-		8850B0C719FC96E600D94FC0 /* TabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0C119FC96E600D94FC0 /* TabBar.png */; };
-		8850B0C819FC96E600D94FC0 /* TopBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 8850B0C219FC96E600D94FC0 /* TopBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,21 +52,20 @@
 		42C5218719D3E40F0036E862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C5218819D3E40F0036E862 /* NEWSATHackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEWSATHackerTests.swift; sourceTree = "<group>"; };
 		42C5219219D3EE970036E862 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		42C5219419D467BD0036E862 /* board1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board1.png; sourceTree = "<group>"; };
 		42C5219619D49AF40036E862 /* sectionInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sectionInfoView.xib; sourceTree = "<group>"; };
 		42C5219819D49D860036E862 /* SectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsView.swift; sourceTree = "<group>"; };
 		42C5219A19D506170036E862 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		42C5219C19D507FF0036E862 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		42C9EFE11A02C68E00617E45 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = Images/more.png; sourceTree = "<group>"; };
+		42C9EFE31A02CA8100617E45 /* whiteslide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = whiteslide.png; path = Images/whiteslide.png; sourceTree = "<group>"; };
+		42C9EFE51A02CD7600617E45 /* triangularButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = triangularButton.png; path = Images/triangularButton.png; sourceTree = "<group>"; };
+		42C9EFE81A02FA8700617E45 /* NewsBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsBoard.swift; sourceTree = "<group>"; };
+		42C9EFEA1A02FBEB00617E45 /* ChooseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTest.swift; sourceTree = "<group>"; };
+		42C9EFEC1A02FF1900617E45 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		42C9EFEE1A02FF3300617E45 /* Chapters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chapters.plist; sourceTree = "<group>"; };
 		42D9775C19FC43D9000D5C73 /* Scroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scroller.swift; sourceTree = "<group>"; };
 		42D9775E19FC43EE000D5C73 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42D9776019FC682E000D5C73 /* HACKer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HACKer.png; sourceTree = "<group>"; };
-		42F2208B19FDF3FC00305E51 /* MathWritingReading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathWritingReading.swift; sourceTree = "<group>"; };
-		8850B0BD19FC96E600D94FC0 /* DefaultViewSectionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultViewSectionButton.png; path = ../Images/DefaultViewSectionButton.png; sourceTree = "<group>"; };
-		8850B0BE19FC96E600D94FC0 /* MoreIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MoreIcon.png; path = ../Images/MoreIcon.png; sourceTree = "<group>"; };
-		8850B0BF19FC96E600D94FC0 /* SATHackerUI.psd */ = {isa = PBXFileReference; lastKnownFileType = file; name = SATHackerUI.psd; path = ../Images/SATHackerUI.psd; sourceTree = "<group>"; };
-		8850B0C019FC96E600D94FC0 /* SearchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SearchIcon.png; path = ../Images/SearchIcon.png; sourceTree = "<group>"; };
-		8850B0C119FC96E600D94FC0 /* TabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TabBar.png; path = ../Images/TabBar.png; sourceTree = "<group>"; };
-		8850B0C219FC96E600D94FC0 /* TopBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TopBar.png; path = ../Images/TopBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +113,8 @@
 			children = (
 				42C5217219D3E40F0036E862 /* AppDelegate.swift */,
 				42D9775C19FC43D9000D5C73 /* Scroller.swift */,
-				42D9775E19FC43EE000D5C73 /* MainViewController.swift */,
-				42F2208B19FDF3FC00305E51 /* MathWritingReading.swift */,
+				42C9EFEC1A02FF1900617E45 /* DataManager.swift */,
+				42C9EFE71A02F84900617E45 /* MainView */,
 				42C5217419D3E40F0036E862 /* ViewController.swift */,
 				42C5217619D3E40F0036E862 /* Main.storyboard */,
 				42C5217919D3E40F0036E862 /* Images.xcassets */,
@@ -131,16 +129,13 @@
 		42C5217019D3E40F0036E862 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42C9EFE11A02C68E00617E45 /* more.png */,
 				42D9776019FC682E000D5C73 /* HACKer.png */,
+				42C9EFE51A02CD7600617E45 /* triangularButton.png */,
+				42C9EFE31A02CA8100617E45 /* whiteslide.png */,
 				42C5219219D3EE970036E862 /* background.jpg */,
-				42C5219419D467BD0036E862 /* board1.png */,
-				8850B0BD19FC96E600D94FC0 /* DefaultViewSectionButton.png */,
-				8850B0BE19FC96E600D94FC0 /* MoreIcon.png */,
-				8850B0BF19FC96E600D94FC0 /* SATHackerUI.psd */,
-				8850B0C019FC96E600D94FC0 /* SearchIcon.png */,
-				8850B0C119FC96E600D94FC0 /* TabBar.png */,
-				8850B0C219FC96E600D94FC0 /* TopBar.png */,
 				42C5217119D3E40F0036E862 /* Info.plist */,
+				42C9EFEE1A02FF3300617E45 /* Chapters.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,6 +155,16 @@
 				42C5218719D3E40F0036E862 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42C9EFE71A02F84900617E45 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				42D9775E19FC43EE000D5C73 /* MainViewController.swift */,
+				42C9EFE81A02FA8700617E45 /* NewsBoard.swift */,
+				42C9EFEA1A02FBEB00617E45 /* ChooseTest.swift */,
+			);
+			name = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,19 +248,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8850B0C319FC96E600D94FC0 /* DefaultViewSectionButton.png in Resources */,
-				8850B0C719FC96E600D94FC0 /* TabBar.png in Resources */,
+				42C9EFEF1A02FF3300617E45 /* Chapters.plist in Resources */,
+				42C9EFE61A02CD7600617E45 /* triangularButton.png in Resources */,
 				42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */,
-				42C5219519D467BD0036E862 /* board1.png in Resources */,
 				42D9776119FC682E000D5C73 /* HACKer.png in Resources */,
 				42C5217819D3E40F0036E862 /* Main.storyboard in Resources */,
+				42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
-				8850B0C819FC96E600D94FC0 /* TopBar.png in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,
+				42C9EFE21A02C68E00617E45 /* more.png in Resources */,
 				42C5217A19D3E40F0036E862 /* Images.xcassets in Resources */,
-				8850B0C519FC96E600D94FC0 /* SATHackerUI.psd in Resources */,
-				8850B0C419FC96E600D94FC0 /* MoreIcon.png in Resources */,
-				8850B0C619FC96E600D94FC0 /* SearchIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +279,10 @@
 				42C5217519D3E40F0036E862 /* ViewController.swift in Sources */,
 				42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */,
 				42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */,
+				42C9EFEB1A02FBEB00617E45 /* ChooseTest.swift in Sources */,
 				42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */,
-				42F2208C19FDF3FC00305E51 /* MathWritingReading.swift in Sources */,
+				42C9EFE91A02FA8700617E45 /* NewsBoard.swift in Sources */,
+				42C9EFED1A02FF1900617E45 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +410,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -419,6 +424,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

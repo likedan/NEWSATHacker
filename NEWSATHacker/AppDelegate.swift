@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        if !NSUserDefaults.standardUserDefaults().boolForKey("everLaunched"){
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "everLaunched")
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstLaunch")
+            DataManager.initializeUserInfo()
+        }else{
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "firstLaunch")
+        }
         // Override point for customization after application launch.
         return true
     }

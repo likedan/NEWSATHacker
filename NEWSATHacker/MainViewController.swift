@@ -12,27 +12,21 @@ class MainViewController: UIViewController {
     
     @IBOutlet var top : UIView!
 
-    @IBOutlet var bottom : UIView!
+    @IBOutlet var satHacker : UILabel!
+    @IBOutlet var menu : UIButton!
 
-    @IBOutlet var mainBoard : MathWritingReading!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.mainBoard = MathWritingReading(frame: CGRectMake(0, 75, 320, 450))
-        self.mainBoard.userInteractionEnabled = true
-        self.view.addSubview(self.mainBoard)
-        
-        self.mainBoard.math.addTarget(self, action: "mathClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-        
-        // Do any additional setup after loading the view.
+       
+        //Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
         
     }
     
     @IBAction func mathClicked(sender: AnyObject){
         
-        self.mainBoard.chosen()
         
     }
     
