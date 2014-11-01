@@ -82,7 +82,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func login(sender : AnyObject) {
         (self.parentViewController as NewsBoard).displayView("login")
     }
-    @IBAction func forgotPass(sender : AnyObject) {
+    @IBAction func forgetPass(sender : AnyObject) {
         (self.parentViewController as NewsBoard).displayView("forgetpass")
     }
     @IBAction func signup(sender : AnyObject) {

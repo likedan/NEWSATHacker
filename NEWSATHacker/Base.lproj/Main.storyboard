@@ -248,6 +248,9 @@
                                         <color key="textColor" red="0.44360173359999999" green="0.70380930659999996" blue="0.82456090329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="KUO-rh-ze2" id="oQJ-Ys-ARY"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="jnH-01-wux">
                                         <rect key="frame" x="39" y="54" width="196" height="30"/>
@@ -255,6 +258,9 @@
                                         <color key="textColor" red="0.44360173359999999" green="0.70380930659999996" blue="0.82456090329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="KUO-rh-ze2" id="x8I-LY-R8e"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" minimumFontSize="17" id="JKz-Pr-3Jc">
                                         <rect key="frame" x="39" y="92" width="196" height="30"/>
@@ -262,6 +268,9 @@
                                         <color key="textColor" red="0.44360173359999999" green="0.70380930659999996" blue="0.82456090329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="KUO-rh-ze2" id="1G9-Da-xR4"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Sc6-3a-enZ">
                                         <rect key="frame" x="19" y="169" width="283" height="1"/>
@@ -303,6 +312,14 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="232"/>
+                    <connections>
+                        <outlet property="email" destination="Niu-1T-5cR" id="dje-NH-EBh"/>
+                        <outlet property="forgetPass" destination="bq0-TN-C5y" id="PHV-yM-N9g"/>
+                        <outlet property="login" destination="nEX-8E-thW" id="WHl-IC-B8f"/>
+                        <outlet property="name" destination="JKz-Pr-3Jc" id="2T2-RK-E0b"/>
+                        <outlet property="pass" destination="jnH-01-wux" id="FGW-bk-USU"/>
+                        <outlet property="signup" destination="xPb-fh-3cv" id="kb9-Dr-vUw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y47-mT-q3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -326,6 +343,9 @@
                                         <color key="textColor" red="0.44360173359999999" green="0.70380930659999996" blue="0.82456090329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BlM-5l-u4k" id="0RW-wa-rZX"/>
+                                        </connections>
                                     </textField>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RJ0-5M-JYv">
                                         <rect key="frame" x="19" y="99" width="283" height="1"/>
@@ -367,6 +387,12 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="178"/>
+                    <connections>
+                        <outlet property="email" destination="fdb-Vf-iSx" id="fpb-sQ-pWS"/>
+                        <outlet property="findpass" destination="h45-ES-y5F" id="De4-mC-1S8"/>
+                        <outlet property="login" destination="IbF-XA-SkI" id="dAL-0o-Su7"/>
+                        <outlet property="signup" destination="Ybv-5A-BfG" id="CON-Nn-uGR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIB-FN-tmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

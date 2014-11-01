@@ -9,13 +9,75 @@
 
 import UIKit
 
-class ForgotPassViewController: UIViewController {
+class ForgotPassViewController: UIViewController, UITextFieldDelegate {
+    
+    @IBOutlet var findpass : UIButton!
+    @IBOutlet var login : UIButton!
+    @IBOutlet var signup : UIButton!
+    
+    @IBOutlet var email: UITextField!
+    
+    var scrollerTapController: UITapGestureRecognizer!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        findpass.addTarget(self, action: "findpass:", forControlEvents: UIControlEvents.TouchUpInside)
+        login.addTarget(self, action: "login:", forControlEvents: UIControlEvents.TouchUpInside)
+        signup.addTarget(self, action: "signup:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        scrollerTapController = UITapGestureRecognizer(target: self, action: "backgroundTapped:")
+        var tapController = UITapGestureRecognizer(target: self, action: "backgroundTapped:")
+        self.view.addGestureRecognizer(tapController)
 
         // Do any additional setup after loading the view.
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        if (self.parentViewController?.parentViewController as MainViewController).isToTop{
+            (self.parentViewController?.parentViewController as MainViewController).autoScroll()
+        }
+        (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = false
+        (self.parentViewController?.parentViewController as MainViewController).scroller.addGestureRecognizer(scrollerTapController)
+            
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
+        (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollerTapController)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == email{
+            email.resignFirstResponder()
+            (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
+            (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollerTapController)
+        }
+        return true
+    }
+    
+    @IBAction func backgroundTapped(recognizer : UITapGestureRecognizer){
+        if email.isFirstResponder(){
+            email.resignFirstResponder()
+            (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
+            (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollerTapController)
+        }else{
+            (self.parentViewController?.parentViewController as MainViewController).autoScroll()
+        }
+    }
+    
+    @IBAction func login(sender : AnyObject){
+        (self.parentViewController as NewsBoard).displayView("login")
+    }
+    @IBAction func findpass(sender: AnyObject){
+        (self.parentViewController as NewsBoard).displayView("forgetpass")
+    }
+    @IBAction func signup(sender : AnyObject){
+        (self.parentViewController as NewsBoard).displayView("signup")
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

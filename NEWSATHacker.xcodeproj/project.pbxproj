@@ -12,7 +12,6 @@
 		42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */; };
 		42C34A4E1A046A720070E2DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4D1A046A720070E2DD /* LoginViewController.swift */; };
 		42C34A511A046F0A0070E2DD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A501A046F0A0070E2DD /* SignUpViewController.swift */; };
-		42C34A531A046F230070E2DD /* FindPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A521A046F230070E2DD /* FindPassViewController.swift */; };
 		42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5217219D3E40F0036E862 /* AppDelegate.swift */; };
 		42C5217519D3E40F0036E862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5217419D3E40F0036E862 /* ViewController.swift */; };
 		42C5217819D3E40F0036E862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C5217619D3E40F0036E862 /* Main.storyboard */; };
@@ -51,7 +50,6 @@
 		42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		42C34A4D1A046A720070E2DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		42C34A501A046F0A0070E2DD /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
-		42C34A521A046F230070E2DD /* FindPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPassViewController.swift; sourceTree = "<group>"; };
 		42C5216D19D3E40F0036E862 /* NEWSATHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEWSATHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C5217119D3E40F0036E862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C5217219D3E40F0036E862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 				42C9EFEA1A02FBEB00617E45 /* ChooseTest.swift */,
 				42C34A4D1A046A720070E2DD /* LoginViewController.swift */,
 				42C34A501A046F0A0070E2DD /* SignUpViewController.swift */,
-				42C34A521A046F230070E2DD /* FindPassViewController.swift */,
 				42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */,
 			);
 			name = MainView;
@@ -301,7 +298,6 @@
 				42C34A511A046F0A0070E2DD /* SignUpViewController.swift in Sources */,
 				42C9EFE91A02FA8700617E45 /* NewsBoard.swift in Sources */,
 				42C9EFED1A02FF1900617E45 /* DataManager.swift in Sources */,
-				42C34A531A046F230070E2DD /* FindPassViewController.swift in Sources */,
 				42C34A4E1A046A720070E2DD /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
