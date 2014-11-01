@@ -11,12 +11,6 @@ import UIKit
 class NewsBoard: UIViewController {
 
     @IBOutlet var scroller : UIScrollView!
-    
-    @IBOutlet var emailLogin : UITextField!
-    @IBOutlet var passLogin : UITextField!
-
-    @IBOutlet var login : UIButton!
-    @IBOutlet var signup : UIButton!
 
     var loginContent : UIViewController!
 
@@ -32,31 +26,45 @@ class NewsBoard: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func displayView(identifier: String){
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            
+            self.loginContent.view.alpha = 0
+            
+            }
+            , completion: {
+                (value: Bool) in
+                self.hideContentController(self.loginContent)
+                self.loginContent = self.storyboard!.instantiateViewControllerWithIdentifier(identifier)! as UIViewController
+                self.displayContentController(self.loginContent)
+
+        })
+    }
+    
     func displayContentController(content: UIViewController){
         self.addChildViewController(content)
         content.didMoveToParentViewController(self)          // 3
+        content.view.alpha = 0
         self.view.addSubview(content.view)
-        var gestureReco = UITapGestureRecognizer(target: self, action: "boardUp:")
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            
+            self.loginContent.view.alpha = 1
+            
+            }
+            , completion: {
+                (value: Bool) in
+                
+        })
+
+        var gestureReco = UITapGestureRecognizer(target: self.childViewControllers[0], action: "backgroundTapped:")
         content.view.addGestureRecognizer(gestureReco)
     }
 
     func hideContentController(content: UIViewController){
         content.view.removeFromSuperview()
         content.removeFromParentViewController()
-    }
-    
-    @IBAction func boardUp(recognizer : UITapGestureRecognizer) {
-        (self.parentViewController as MainViewController).moveUp()
-        recognizer.removeTarget(self, action: "boardUp:")
-        recognizer.addTarget(self, action: "boardDown:")
-    }
-    
-    @IBAction func boardDown(recognizer : UITapGestureRecognizer) {
-        
-        (self.parentViewController as MainViewController).moveDown()
-        recognizer.removeTarget(self, action: "boardDown:")
-        recognizer.addTarget(self, action: "boardUp:")
-
     }
     
     override func didReceiveMemoryWarning() {

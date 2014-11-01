@@ -19,6 +19,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet var scroller : UIScrollView!
     
+    var isToTop = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +34,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
     func scrollViewDidScroll(scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 0{
             choose.frame = CGRectMake(scrollView.contentOffset.y, scrollView.contentOffset.y, choose.frame.width, choose.frame.height)
+        }else{
+            choose.frame = CGRectMake(0, choose.frame.origin.y, choose.frame.width, choose.frame.height)
         }
         choose.alpha = 1 - scrollView.contentOffset.y / 200
         if choose.alpha < 0.9{
@@ -40,33 +44,25 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
             choose.userInteractionEnabled = true
         }
     }
-    /*
-    func scrollViewWillEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        autoScroll()
-    }
-    func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
-        autoScroll()
-    }
+    
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate{
+            autoScroll()
+        }
+    }
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         autoScroll()
     }
-    */
+    
     func autoScroll(){
-        if scroller.contentOffset.y < 100{
+        if isToTop{
             scroller.setContentOffset(CGPointMake(0, scroller.contentSize.height - scroller.frame.height), animated: true)
+            isToTop = false
         }else{
             scroller.setContentOffset(CGPointMake(0, 0), animated: true)
+            isToTop = true
         }
-        
 
-    }
-    
-    func moveDown(){
-        
-    }
-    
-    func moveUp(){
-        
     }
     
     @IBAction func mathClicked(sender: AnyObject){
