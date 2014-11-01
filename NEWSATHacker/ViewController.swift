@@ -54,7 +54,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate{
         }*/
     }
     
-    func changeBoard(gesture: UISwipeGestureRecognizer){
+    func changeBoard(gesture: UIScreenEdgePanGestureRecognizer){
         
         UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             self.subjectBoard.alpha = 0

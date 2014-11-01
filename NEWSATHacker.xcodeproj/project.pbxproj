@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3D1A03593A0070E2DD /* backWhite.png */; };
+		42C34A401A042D220070E2DD /* circleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3F1A042D220070E2DD /* circleButton.png */; };
+		42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */; };
+		42C34A4E1A046A720070E2DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4D1A046A720070E2DD /* LoginViewController.swift */; };
+		42C34A511A046F0A0070E2DD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A501A046F0A0070E2DD /* SignUpViewController.swift */; };
+		42C34A531A046F230070E2DD /* FindPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A521A046F230070E2DD /* FindPassViewController.swift */; };
 		42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5217219D3E40F0036E862 /* AppDelegate.swift */; };
 		42C5217519D3E40F0036E862 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5217419D3E40F0036E862 /* ViewController.swift */; };
 		42C5217819D3E40F0036E862 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C5217619D3E40F0036E862 /* Main.storyboard */; };
@@ -16,7 +21,6 @@
 		42C5218919D3E40F0036E862 /* NEWSATHackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5218819D3E40F0036E862 /* NEWSATHackerTests.swift */; };
 		42C5219319D3EE970036E862 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219219D3EE970036E862 /* background.jpg */; };
 		42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42C5219619D49AF40036E862 /* sectionInfoView.xib */; };
-		42C5219919D49D860036E862 /* SectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5219819D49D860036E862 /* SectionsView.swift */; };
 		42C5219B19D506170036E862 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C5219A19D506170036E862 /* CoreGraphics.framework */; };
 		42C5219D19D507FF0036E862 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C5219C19D507FF0036E862 /* Foundation.framework */; };
 		42C9EFE21A02C68E00617E45 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C9EFE11A02C68E00617E45 /* more.png */; };
@@ -43,6 +47,11 @@
 
 /* Begin PBXFileReference section */
 		42C34A3D1A03593A0070E2DD /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
+		42C34A3F1A042D220070E2DD /* circleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circleButton.png; path = Images/circleButton.png; sourceTree = "<group>"; };
+		42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
+		42C34A4D1A046A720070E2DD /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		42C34A501A046F0A0070E2DD /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = ../SignUpViewController.swift; sourceTree = "<group>"; };
+		42C34A521A046F230070E2DD /* FindPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPassViewController.swift; sourceTree = "<group>"; };
 		42C5216D19D3E40F0036E862 /* NEWSATHacker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NEWSATHacker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C5217119D3E40F0036E862 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C5217219D3E40F0036E862 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +64,6 @@
 		42C5218819D3E40F0036E862 /* NEWSATHackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEWSATHackerTests.swift; sourceTree = "<group>"; };
 		42C5219219D3EE970036E862 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		42C5219619D49AF40036E862 /* sectionInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sectionInfoView.xib; sourceTree = "<group>"; };
-		42C5219819D49D860036E862 /* SectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionsView.swift; sourceTree = "<group>"; };
 		42C5219A19D506170036E862 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		42C5219C19D507FF0036E862 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42C9EFE11A02C68E00617E45 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = more.png; path = Images/more.png; sourceTree = "<group>"; };
@@ -122,7 +130,6 @@
 				42C5217919D3E40F0036E862 /* Images.xcassets */,
 				42C5217B19D3E40F0036E862 /* LaunchScreen.xib */,
 				42C5219619D49AF40036E862 /* sectionInfoView.xib */,
-				42C5219819D49D860036E862 /* SectionsView.swift */,
 				42C5217019D3E40F0036E862 /* Supporting Files */,
 			);
 			path = NEWSATHacker;
@@ -134,6 +141,7 @@
 				42C34A3D1A03593A0070E2DD /* backWhite.png */,
 				42C9EFE11A02C68E00617E45 /* more.png */,
 				42D9776019FC682E000D5C73 /* HACKer.png */,
+				42C34A3F1A042D220070E2DD /* circleButton.png */,
 				42C9EFE51A02CD7600617E45 /* triangularButton.png */,
 				42C9EFE31A02CA8100617E45 /* whiteslide.png */,
 				42C5219219D3EE970036E862 /* background.jpg */,
@@ -166,6 +174,10 @@
 				42D9775E19FC43EE000D5C73 /* MainViewController.swift */,
 				42C9EFE81A02FA8700617E45 /* NewsBoard.swift */,
 				42C9EFEA1A02FBEB00617E45 /* ChooseTest.swift */,
+				42C34A4D1A046A720070E2DD /* LoginViewController.swift */,
+				42C34A501A046F0A0070E2DD /* SignUpViewController.swift */,
+				42C34A521A046F230070E2DD /* FindPassViewController.swift */,
+				42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -256,6 +268,7 @@
 				42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */,
 				42D9776119FC682E000D5C73 /* HACKer.png in Resources */,
 				42C5217819D3E40F0036E862 /* Main.storyboard in Resources */,
+				42C34A401A042D220070E2DD /* circleButton.png in Resources */,
 				42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */,
 				42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
@@ -279,14 +292,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42C5219919D49D860036E862 /* SectionsView.swift in Sources */,
+				42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */,
 				42C5217519D3E40F0036E862 /* ViewController.swift in Sources */,
 				42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */,
 				42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */,
 				42C9EFEB1A02FBEB00617E45 /* ChooseTest.swift in Sources */,
 				42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */,
+				42C34A511A046F0A0070E2DD /* SignUpViewController.swift in Sources */,
 				42C9EFE91A02FA8700617E45 /* NewsBoard.swift in Sources */,
 				42C9EFED1A02FF1900617E45 /* DataManager.swift in Sources */,
+				42C34A531A046F230070E2DD /* FindPassViewController.swift in Sources */,
+				42C34A4E1A046A720070E2DD /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChooseTest: UIViewController {
+class ChooseTest: UIViewController, UITextFieldDelegate{
 
     @IBOutlet var scroller : UIScrollView!
     @IBOutlet var stateButton : UIView!
@@ -31,7 +31,7 @@ class ChooseTest: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
     func initializeButtons(){
         
         self.scroller.alpha = 1
@@ -51,6 +51,36 @@ class ChooseTest: UIViewController {
             
         }
         
+        var gestureReco = UIScreenEdgePanGestureRecognizer(target: self, action: "dragged:")
+        gestureReco.edges = UIRectEdge.Left
+        self.scroller.addGestureRecognizer(gestureReco)
+        
+    }
+    
+    @IBAction func dragged(recognizer : UIScreenEdgePanGestureRecognizer) {
+    
+        let translation = recognizer.translationInView(self.view)
+
+        if translation.x > 0{
+            self.scroller.alpha = 1 - translation.x / 200
+        }
+        if recognizer.state == UIGestureRecognizerState.Cancelled || recognizer.state == UIGestureRecognizerState.Failed || recognizer.state == UIGestureRecognizerState.Ended{
+            
+            if currentStatus.count > 0{
+                currentStatus.removeAtIndex(currentStatus.count - 1)
+                self.disappearButtons()
+                self.changeStateButton()
+            }else{
+                UIView.animateWithDuration(0.2, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                    
+                    self.scroller.alpha = 1
+                    
+                    }
+                    , completion: {
+                        (value: Bool) in
+                })
+            }
+        }
     }
     
     func createStateButton(){
@@ -129,12 +159,12 @@ class ChooseTest: UIViewController {
         var button = UIButton(frame: CGRectMake(320, 80 + 90 * CGFloat(number), 260, 90))
         button.addTarget(self, action: "buttonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
 
-        var line = UIImageView(frame: CGRectMake(-0, 80, 290, 4))
+        var line = UIImageView(frame: CGRectMake(-0, 40, 290, 4))
         line.backgroundColor = UIColor.whiteColor()
         line.transform = angle
         button.addSubview(line)
         
-        var label = UILabel(frame: CGRectMake(-60, 0, 304, 110))
+        var label = UILabel(frame: CGRectMake(-60, -40, 304, 110))
         label.text = arr[number] as? String
         label.font = UIFont(name: "AvenirNext-Medium", size: 32)
         label.textAlignment = NSTextAlignment.Right

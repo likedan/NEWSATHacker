@@ -8,24 +8,65 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UIScrollViewDelegate{
     
-    @IBOutlet var top : UIView!
-
     @IBOutlet var satHacker : UILabel!
     @IBOutlet var menu : UIButton!
-
     
+    @IBOutlet var triangle : UIImageView!
+    @IBOutlet var choose : UIView!
+    @IBOutlet var news: UIView!
+
+    @IBOutlet var scroller : UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        scroller.contentSize = CGSizeMake(320, 600)
+        scroller.showsVerticalScrollIndicator = false
         //Do any additional setup after loading the view.
         //self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
         
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        choose.frame = CGRectMake(scrollView.contentOffset.y, scrollView.contentOffset.y, choose.frame.width, choose.frame.height)
+        choose.alpha = 1 - scrollView.contentOffset.y / 200
+    }
+    
+    func moveDown(){
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            
+            self.triangle.center = CGPointMake(self.triangle.center.x, self.triangle.center.y + 300)
+            self.choose.center = CGPointMake(self.choose.center.x, self.choose.center.y + 300)
+            self.news.center = CGPointMake(self.news.center.x, self.news.center.y + 300)
+            
+            }
+            , completion: {
+                (value: Bool) in
+                
+        })
+    }
+    
+    func moveUp(){
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            
+            self.triangle.center = CGPointMake(self.triangle.center.x, self.triangle.center.y - 300)
+            self.choose.center = CGPointMake(self.choose.center.x, self.choose.center.y - 300)
+            self.news.center = CGPointMake(self.news.center.x, self.news.center.y - 300)
+
+            }
+            , completion: {
+                (value: Bool) in
+
+        })
+
+    }
+    
     @IBAction func mathClicked(sender: AnyObject){
+        
         
         
     }
