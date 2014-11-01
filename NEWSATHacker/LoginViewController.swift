@@ -43,7 +43,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         (self.parentViewController?.parentViewController as MainViewController).scroller.addGestureRecognizer(scrollertapController)
 
     }
-    
+    func textFieldDidEndEditing(textField: UITextField) {
+        (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
+        (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollertapController)
+    }
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField == email{
             email.resignFirstResponder()
@@ -65,7 +68,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
             (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollertapController)
         }else if pass.isFirstResponder(){
-            pass.isFirstResponder()
+            pass.resignFirstResponder()
             (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
             (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollertapController)
 
