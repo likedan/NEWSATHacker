@@ -66,7 +66,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="choose" destination="kFw-tR-4pq" id="3zb-LN-ogm"/>
+                        <outlet property="choose" destination="3lr-hi-wsD" id="4TY-eW-9Qn"/>
                         <outlet property="menu" destination="OXX-E5-970" id="KsO-gJ-hs9"/>
                         <outlet property="news" destination="6id-Gw-2S1" id="jbZ-IK-j9t"/>
                         <outlet property="satHacker" destination="ITm-SW-Fh6" id="0wY-Wy-S00"/>
