@@ -36,9 +36,7 @@ class ForgotPassViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField) {
         
-        if (self.parentViewController?.parentViewController as MainViewController).isToTop{
-            (self.parentViewController?.parentViewController as MainViewController).autoScroll()
-        }
+        (self.parentViewController?.parentViewController as MainViewController).scrollToBottom()
         (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = false
         (self.parentViewController?.parentViewController as MainViewController).scroller.addGestureRecognizer(scrollerTapController)
             
@@ -63,7 +61,7 @@ class ForgotPassViewController: UIViewController, UITextFieldDelegate {
             (self.parentViewController?.parentViewController as MainViewController).scroller.scrollEnabled = true
             (self.parentViewController?.parentViewController as MainViewController).scroller.removeGestureRecognizer(scrollerTapController)
         }else{
-            (self.parentViewController?.parentViewController as MainViewController).autoScroll()
+            (self.parentViewController?.parentViewController as MainViewController).scrollToTop()
         }
     }
     

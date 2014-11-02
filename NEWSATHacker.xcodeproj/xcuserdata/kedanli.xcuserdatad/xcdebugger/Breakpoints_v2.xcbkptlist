@@ -120,12 +120,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NEWSATHacker/MainViewController.swift"
-            timestampString = "436568856.436127"
+            timestampString = "436643330.05795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "didReceiveMemoryWarning()"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "dragged(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -136,12 +136,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NEWSATHacker/MainViewController.swift"
-            timestampString = "436568856.436127"
+            timestampString = "436642210.917751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "didReceiveMemoryWarning()"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "showMenu(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -326,11 +326,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NEWSATHacker/LoginViewController.swift"
-            timestampString = "436569678.982943"
+            timestampString = "436605742.255595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "didReceiveMemoryWarning()"
             landmarkType = "5">
          </BreakpointContent>
@@ -342,12 +342,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NEWSATHacker/LoginViewController.swift"
-            timestampString = "436569678.982943"
+            timestampString = "436605742.255595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "forgotPass(_:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "forgetPass(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -358,11 +358,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NEWSATHacker/LoginViewController.swift"
-            timestampString = "436569678.982943"
+            timestampString = "436605742.255595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "backgroundTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>

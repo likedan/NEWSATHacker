@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4221E5B01A069B5300D81918 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */; };
 		42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3D1A03593A0070E2DD /* backWhite.png */; };
 		42C34A401A042D220070E2DD /* circleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3F1A042D220070E2DD /* circleButton.png */; };
 		42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		42C34A3D1A03593A0070E2DD /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
 		42C34A3F1A042D220070E2DD /* circleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circleButton.png; path = Images/circleButton.png; sourceTree = "<group>"; };
 		42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				42C34A4D1A046A720070E2DD /* LoginViewController.swift */,
 				42C34A501A046F0A0070E2DD /* SignUpViewController.swift */,
 				42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */,
+				4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */,
 				42C5217519D3E40F0036E862 /* ViewController.swift in Sources */,
+				4221E5B01A069B5300D81918 /* MenuTableViewController.swift in Sources */,
 				42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */,
 				42D9775D19FC43D9000D5C73 /* Scroller.swift in Sources */,
 				42C9EFEB1A02FBEB00617E45 /* ChooseTest.swift in Sources */,

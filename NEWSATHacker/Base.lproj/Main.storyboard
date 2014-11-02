@@ -13,6 +13,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="QKx-q1-RRY">
+                                <rect key="frame" x="0.0" y="0.0" width="520" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="DkU-0O-VMT" kind="embed" id="tXz-CM-rzD"/>
+                                </connections>
+                            </containerView>
                             <view contentMode="scaleToFill" id="kFw-tR-4pq">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,15 +66,17 @@
                                         </connections>
                                     </scrollView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.4941176471" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.4941176471" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="choose" destination="3lr-hi-wsD" id="4TY-eW-9Qn"/>
+                        <outlet property="main" destination="kFw-tR-4pq" id="v2W-f0-4Yi"/>
                         <outlet property="menu" destination="OXX-E5-970" id="KsO-gJ-hs9"/>
+                        <outlet property="menuTable" destination="QKx-q1-RRY" id="e3b-Oy-deY"/>
                         <outlet property="news" destination="6id-Gw-2S1" id="jbZ-IK-j9t"/>
                         <outlet property="satHacker" destination="ITm-SW-Fh6" id="0wY-Wy-S00"/>
                         <outlet property="scroller" destination="zgg-GQ-W3U" id="2Sk-8Z-X3u"/>
@@ -77,20 +86,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6r4-6R-z9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15" y="-412"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="pCp-N9-zpD">
-            <objects>
-                <viewController id="fHW-HG-P3l" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dgi-QP-8Dp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N8j-uv-icB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="894" y="-684"/>
         </scene>
         <!--Choose Test-->
         <scene sceneID="QXv-Ld-uVR">
@@ -397,6 +392,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RIB-FN-tmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="91" y="434"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="cUT-XG-SoQ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="DkU-0O-VMT" customClass="MenuTableViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EoN-MY-fbu">
+                        <rect key="frame" x="0.0" y="0.0" width="520" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S5I-Ei-7lJ">
+                                <rect key="frame" x="330" y="2" width="180" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoE-9W-ME4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30" y="-1137"/>
         </scene>
     </scenes>
     <resources>
