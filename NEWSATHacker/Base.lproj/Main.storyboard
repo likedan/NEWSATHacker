@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" id="QKx-q1-RRY">
-                                <rect key="frame" x="0.0" y="0.0" width="520" height="568"/>
+                                <rect key="frame" x="320" y="0.0" width="200" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="DkU-0O-VMT" kind="embed" id="tXz-CM-rzD"/>
@@ -24,8 +24,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT HACKer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ITm-SW-Fh6">
-                                        <rect key="frame" x="20" y="19" width="191" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT HACKer😉" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ITm-SW-Fh6">
+                                        <rect key="frame" x="20" y="19" width="208" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,22 +42,22 @@
                                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <containerView contentMode="scaleToFill" id="3lr-hi-wsD">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="359"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                <connections>
-                                                    <segue destination="xNr-6f-K3F" kind="embed" id="HJI-kK-NyU"/>
-                                                </connections>
-                                            </containerView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteslide.png" id="ukh-BY-eEw">
                                                 <rect key="frame" x="0.0" y="286" width="320" height="73"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <containerView opaque="NO" contentMode="scaleToFill" id="6id-Gw-2S1">
-                                                <rect key="frame" x="0.0" y="358" width="320" height="500"/>
+                                                <rect key="frame" x="0.0" y="358" width="320" height="700"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <connections>
                                                     <segue destination="P7b-Ps-cI8" kind="embed" id="7ti-Q3-j2w"/>
+                                                </connections>
+                                            </containerView>
+                                            <containerView contentMode="scaleToFill" id="3lr-hi-wsD">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="359"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                <connections>
+                                                    <segue destination="xNr-6f-K3F" kind="embed" id="HJI-kK-NyU"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -224,6 +224,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdD-MB-ucn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="411" y="-111"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tpz-M1-0fw">
+            <objects>
+                <viewController id="jQH-4v-aZr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GjE-sp-jhO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nJ-c4-X9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="-301"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="uWG-x2-vW3">
@@ -398,11 +412,11 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="DkU-0O-VMT" customClass="MenuTableViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EoN-MY-fbu">
-                        <rect key="frame" x="0.0" y="0.0" width="520" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S5I-Ei-7lJ">
-                                <rect key="frame" x="330" y="2" width="180" height="70"/>
+                                <rect key="frame" x="10" y="-6" width="180" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

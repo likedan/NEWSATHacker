@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: "firstLaunch")
         }
+        //DataManager.initializeUserInfo()
+
         // Override point for customization after application launch.
         return true
     }

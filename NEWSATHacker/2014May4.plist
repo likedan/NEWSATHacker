@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Passages</key>
+	<array>
+		<dict>
+			<key>italic</key>
+			<string></string>
+			<key>body</key>
+			<string>    In between school days, we gathered hazelnuts, fished, had long deer-hunting weekends, went to  powwows, beaded on looms, and made quilts. I did not question the necessity or value of our school education,  but somehow I grew up knowing it wasn’t the onlyeducation I would need. I’m thankful for those experiences of my Anishinaabe heritage, because now I know by heart not only the national anthem, but the ancient song of the loon. I recognize not only the alphabet and the parts of an English sentence, but the intricate language of a beaver’s teeth and tail.</string>
+			<key>style</key>
+			<string>normal</string>
+		</dict>
+		<dict>
+			<key>italic</key>
+			<string></string>
+			<key>body</key>
+			<string>    Daily life is overflowing with mundane mental events. A paper clip gleams amid stacks of documents, a friend’s face shines like a beacon out of a crowd, the smell of freshly baked bread evokes childhood memories— thoughts and perceptions such as these flow by with monotonous ease.
+So it seems, anyway. Yet given what scientists know about how brains work, even the ability to perceive a  paper clip on a messy desk represents an extraordinary  and mysterious achievement.</string>
+			<key>style</key>
+			<string>normal</string>
+		</dict>
+		<dict>
+			<key>italic</key>
+			<string>The following passage is from a 1991 essay that discusses the debate over which authors should be taught in English classes.</string>
+			<key>body</key>
+			<string>    Now, what are we to make of this sputtering debate, in which charges of imperialism are met by equally passionate accusations of vandalism, in which each side hates the other, and yet each seems to have its share of reason? It occurs to me that perhaps what we have here is one of those debates in which the opposing sides, unbeknownst to themselves, share a myopia that will turn out to be the most interesting and important feature of the whole discussion, a debate, for instance, like that of the Founding Fathers over the nature of the franchise. Think of all the energy and passion spent debating the question of property qualifications, or direct versus legislative elections, while all along, unmentioned and unimagined, was the fact—to us so central—that women and slaves were never considered for any kind of vote.
+     While everyone is busy fighting over what should be taught in the classroom, something is being overlooked. That is the state of reading, and books, and literature in our country, at this time. Why, ask yourself, is everyone so hot under the collar about what to put on the required-reading shelf? It is because, while we have been arguing so fiercely about which books make the best medicine, the patient has been slipping deeper and deeper into a coma.
+     Let us imagine a country in which reading was a popular voluntary activity. There, parents read books for their own edification and pleasure and are seen by their children at this silent and mysterious pastime. These parents also read to their children, give them books for presents, talk to them about books, and underwrite, with their taxes, a public library system that is open all day, every day. In school, the children study certain books together but also have an active reading life of their own. Years later, it may even be hard for them to remember if they read Jane Eyre at home and Judy Blume in class or the other way around.  In college, young people continue to be assigned certain books, but far more important are the books they discover for themselves browsing in the library, in bookstores, on the shelves of friends, one book leading to another, back and forth in history and across languages and cultures. After graduation, they continue to read and in the fullness of time produce a new generation of readers. Oh happy land! I wish we all lived there.
+    In that country of real readers, voluntary, active, self- determined readers, a debate like the current one over the canon would not be taking place. Or if it did, it would be as a kind of parlor game:  What books would you take to a desert island? Everyone would know that the top-ten list was merely a tiny fraction of the books one would read in a lifetime. It would not seem racist or sexist or hopelessly hidebound to put Nathaniel Hawthorne on the list and not Toni Morrison.2 It would be more like putting oatmeal and not noodles on the breakfast menu—a choice partly arbitrary, partly a nod to the national past, and partly, dare one say it, a kind of reverse affirmative action:  School might frankly be the place where one reads the books that are a little off-putting, that have gone a little cold, that you might overlook because they do not address, in reader- friendly contemporary fashion, the issues most immediately at stake in modern life but that, with a little study, turn out to have a great deal to say. Being on the list wouldn’t mean so much. It might even add to a writer’s cachet not to be on the list, to be in one way or another too heady, too daring, too exciting to be ground up into institutional fodder for teenagers. Generations of high school kids have been turned off to George Eliot by being forced to read Silas Marner at a tender age. One can imagine a whole new readership for her if grown-ups were left to approach Middlemarch and Daniel Deronda with open minds, at their leisure.</string>
+			<key>style</key>
+			<string>normal</string>
+		</dict>
+	</array>
+	<key>Passage1offset</key>
+	<string>88</string>
+	<key>Passage2offset</key>
+	<string>88</string>
+	<key>Passage3italic</key>
+	<string></string>
+	<key>Passage3offset</key>
+	<string>170</string>
+	<key>Questions</key>
+	<dict>
+		<key>1</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>Edmund White is a ------- author:  he has written novels,  essays, short stories, a travel book, and a biography.</string>
+			<key>a</key>
+			<string>demonstrative</string>
+			<key>b</key>
+			<string>nebulous</string>
+			<key>c</key>
+			<string>meticulous</string>
+			<key>d</key>
+			<string>versatile</string>
+			<key>e</key>
+			<string>metaphoric</string>
+			<key>answer</key>
+			<string>D</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>2</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>The archaeologist believed the coin she unearthed  was ------- evidence, unquestionable proof that the  site dated to the fourth century.</string>
+			<key>a</key>
+			<string>immaterial</string>
+			<key>b</key>
+			<string>potential</string>
+			<key>c</key>
+			<string>incriminating</string>
+			<key>d</key>
+			<string>nominal</string>
+			<key>e</key>
+			<string>indisputable</string>
+			<key>answer</key>
+			<string>E</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>3</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>Although the rigors of ballet dancing are primarily  -------, this art is also emotionally and spiritually -------.</string>
+			<key>a</key>
+			<string>illusory . . taxing</string>
+			<key>b</key>
+			<string>exaggerated . . balanced</string>
+			<key>c</key>
+			<string>physical . . demanding</string>
+			<key>d</key>
+			<string>appealing . . indulgent</string>
+			<key>e</key>
+			<string>strenuous . . dubious</string>
+			<key>answer</key>
+			<string>C</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>4</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>Studies of ------- among turtles are sometimes ------- by the fact that the subjects live so long that researchers retire before the studies can be completed.</string>
+			<key>a</key>
+			<string>extinction . . enhanced</string>
+			<key>b</key>
+			<string>longevity . . hampered</string>
+			<key>c</key>
+			<string>behavior . . belied</string>
+			<key>d</key>
+			<string>mortality . . bolstered</string>
+			<key>e</key>
+			<string>reproduction . . confirmed</string>
+			<key>answer</key>
+			<string>B</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>5</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>A model of ------- behavior, Cunningham never ate or drank to excess.</string>
+			<key>a</key>
+			<string>temperate</string>
+			<key>b</key>
+			<string>laconic</string>
+			<key>c</key>
+			<string>duplicitous</string>
+			<key>d</key>
+			<string>aesthetic</string>
+			<key>e</key>
+			<string>voluble</string>
+			<key>answer</key>
+			<string>A</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>6</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>The entrepreneur had a well-deserved reputation for  -------, having accurately anticipated many changes unforeseen by established business leaders.</string>
+			<key>a</key>
+			<string>prescience</string>
+			<key>b</key>
+			<string>sincerity</string>
+			<key>c</key>
+			<string>avarice</string>
+			<key>d</key>
+			<string>complicity</string>
+			<key>e</key>
+			<string>mendacity</string>
+			<key>answer</key>
+			<string>A</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>7</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>Scientists require observable data, not -------, to support a hypothesis; sound science is grounded  in ------- results rather than speculation.</string>
+			<key>a</key>
+			<string>induction . . diminutive</string>
+			<key>b</key>
+			<string>experimentation . . pragmatic</string>
+			<key>c</key>
+			<string>intuition . . fiscal</string>
+			<key>d</key>
+			<string>bombast . . theoretical</string>
+			<key>e</key>
+			<string>conjecture . . empirical</string>
+			<key>answer</key>
+			<string>E</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>8</key>
+		<dict>
+			<key>questionType</key>
+			<string>4</string>
+			<key>question</key>
+			<string>The director complained that the sitcom’s theme song was downright -------, having no more pep and vigor than a -------.</string>
+			<key>a</key>
+			<string>tedious . . jingle</string>
+			<key>b</key>
+			<string>inchoate . . lullaby</string>
+			<key>c</key>
+			<string>lugubrious . . dirge</string>
+			<key>d</key>
+			<string>facetious . . ballad</string>
+			<key>e</key>
+			<string>sprightly . . eulogy</string>
+			<key>answer</key>
+			<string>C</string>
+			<key>Passage</key>
+			<string>NO</string>
+		</dict>
+		<key>9</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>The main idea of the passage is that the author</string>
+			<key>a</key>
+			<string>preferred certain academic subjects over others</string>
+			<key>b</key>
+			<string>succeeded in learning to speak many foreign languages</string>
+			<key>c</key>
+			<string>valued knowledge of the natural world more than book learning</string>
+			<key>d</key>
+			<string>loved both family trips and tribal activities</string>
+			<key>e</key>
+			<string>learned many important things both in and  out of school</string>
+			<key>answer</key>
+			<string>E</string>
+			<key>Passage</key>
+			<string>1</string>
+			<key>surrounding</key>
+			<string>NO</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>10</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>The author’s overall tone in this passage is best described as one of</string>
+			<key>a</key>
+			<string>jubilation</string>
+			<key>b</key>
+			<string>frustration</string>
+			<key>c</key>
+			<string>curiosity</string>
+			<key>d</key>
+			<string>appreciation</string>
+			<key>e</key>
+			<string>uncertainty</string>
+			<key>answer</key>
+			<string>D</string>
+			<key>Passage</key>
+			<string>1</string>
+			<key>surrounding</key>
+			<string>NO</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>11</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In the first paragraph, the author implicitly likens our experience of sensory impressions to</string>
+			<key>a</key>
+			<string>an emotional roller coaster</string>
+			<key>b</key>
+			<string>an unobstructed stream</string>
+			<key>c</key>
+			<string>a repeated image</string>
+			<key>d</key>
+			<string>a nostalgic reminiscence</string>
+			<key>e</key>
+			<string>a diverting daydream</string>
+			<key>answer</key>
+			<string>B</string>
+			<key>Passage</key>
+			<string>2</string>
+			<key>surrounding</key>
+			<string>NO</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>12</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>The primary purpose of the passage is to</string>
+			<key>a</key>
+			<string>celebrate life’ s mundane but gratifying pleasures</string>
+			<key>b</key>
+			<string>convey the overwhelming confusion of everyday life</string>
+			<key>c</key>
+			<string>explore the biological implications of a person’s decisions</string>
+			<key>d</key>
+			<string>suggest the complexity of perceptual processes</string>
+			<key>e</key>
+			<string>present a scientific analysis of an automatic reflex</string>
+			<key>answer</key>
+			<string>E</string>
+			<key>Passage</key>
+			<string>2</string>
+			<key>surrounding</key>
+			<string>NO</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>13</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>According to the author, too much energy today is spent debating</string>
+			<key>a</key>
+			<string>how to improve the education system</string>
+			<key>b</key>
+			<string>how to make literature seem relevant</string>
+			<key>c</key>
+			<string>who the better writers are</string>
+			<key>d</key>
+			<string>what students should read in school</string>
+			<key>e</key>
+			<string>whether or not to teach classic works</string>
+			<key>answer</key>
+			<string>D</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>NO</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>14</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In the first two paragraphs of the passage (lines 1-23), the author suggests that both sides of the debate</string>
+			<key>a</key>
+			<string>neglect a fundamental issue</string>
+			<key>b</key>
+			<string>disregard a key piece of evidence</string>
+			<key>c</key>
+			<string>ignore opposing views</string>
+			<key>d</key>
+			<string>lack a historical perspective</string>
+			<key>e</key>
+			<string>dismiss a valuable tradition</string>
+			<key>answer</key>
+			<string>A</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>Now, what are we to make of this sputtering </string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>15</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>The author invokes “the Founding Fathers” (lines 9-10) chiefly in order to</string>
+			<key>a</key>
+			<string>appeal to the reader’s sense of patriotism</string>
+			<key>b</key>
+			<string>introduce a historical parallel</string>
+			<key>c</key>
+			<string>examine the history of legislative debate</string>
+			<key>d</key>
+			<string>remind the reader how attitudes change over time</string>
+			<key>e</key>
+			<string>suggest that progress is compatible with tradition</string>
+			<key>answer</key>
+			<string>B</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>whole discussion, a debate, for instance, like that of the Founding Fathers</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>16</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In line 18, “state” most nearly means</string>
+			<key>a</key>
+			<string>government</string>
+			<key>b</key>
+			<string>territory</string>
+			<key>c</key>
+			<string>condition</string>
+			<key>d</key>
+			<string>scale</string>
+			<key>e</key>
+			<string>mood</string>
+			<key>answer</key>
+			<string>C</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>That is the state of reading, and books, and literature in our</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>17</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In line 23, the “coma” represents the</string>
+			<key>a</key>
+			<string>rebellion of students against traditional texts</string>
+			<key>b</key>
+			<string>lack of enthusiasm for reading in general</string>
+			<key>c</key>
+			<string>scarcity of books on official reading lists</string>
+			<key>d</key>
+			<string>difficulty of understanding archaic language</string>
+			<key>e</key>
+			<string>negative effects of popular media</string>
+			<key>answer</key>
+			<string>B</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>been slipping deeper and deeper into a coma.</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>18</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In lines 24-27 (“Let . . . pastime”), the country described is noteworthy because</string>
+			<key>a</key>
+			<string>people have allowed new interests to develop from their reading</string>
+			<key>b</key>
+			<string>parents demonstrate their enjoyment of reading</string>
+			<key>c</key>
+			<string>children learn to read at an early age</string>
+			<key>d</key>
+			<string>children and parents share many activities</string>
+			<key>e</key>
+			<string>writing is viewed as a valuable skill</string>
+			<key>answer</key>
+			<string>B</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>Let us imagine a country in which reading was</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>19</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>Lines 30-39 (“In school . . . cultures”) present a model of education where students learn to</string>
+			<key>a</key>
+			<string>value cultural diversity over tradition</string>
+			<key>b</key>
+			<string>respect the views of both sides of the debate</string>
+			<key>c</key>
+			<string>reflect critically on the nature of American schooling</string>
+			<key>d</key>
+			<string>differentiate between classic and contemporary works</string>
+			<key>e</key>
+			<string>explore the world through wide-ranging reading</string>
+			<key>answer</key>
+			<string>E</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>library system that is open all day, every day</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>20</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In lines 33-34, the author cites Jane Eyre and Judy Blume primarily in order to</string>
+			<key>a</key>
+			<string>propose that a love of reading might blur a commonly perceived distinction</string>
+			<key>b</key>
+			<string>show that younger readers cannot distinguish between literature of different eras</string>
+			<key>c</key>
+			<string>argue that most modern novels have no lasting impact on readers</string>
+			<key>d</key>
+			<string>observe that classic literature has great appeal for even reluctant readers</string>
+			<key>e</key>
+			<string>indicate that certain works are interchangeable</string>
+			<key>answer</key>
+			<string>A</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>be hard for them to remember if they read</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>21</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In lines 35-39 (“In college . . . cultures”), the education illustrated is best described as</string>
+			<key>a</key>
+			<string>elitist</string>
+			<key>b</key>
+			<string>philanthropic</string>
+			<key>c</key>
+			<string>eclectic</string>
+			<key>d</key>
+			<string>methodical</string>
+			<key>e</key>
+			<string>rudimentary</string>
+			<key>answer</key>
+			<string>C</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>In college, young people continue to be assigned</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>22</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>In lines 54-60 (“School . . . say”), the author describes a world in which schools teach books that are</string>
+			<key>a</key>
+			<string>interesting</string>
+			<key>b</key>
+			<string>celebrated</string>
+			<key>c</key>
+			<string>uncontroversial</string>
+			<key>d</key>
+			<string>not obviously relevant</string>
+			<key>e</key>
+			<string>not likely to inspire</string>
+			<key>answer</key>
+			<string>D</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>one say it, a kind of reverse affirmative action</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>23</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>Lines 60-64 (“Being . . . teenagers”) suggest that excluding a book from a reading list might</string>
+			<key>a</key>
+			<string>enhance the reputation of the book’s author</string>
+			<key>b</key>
+			<string>encourage students to protest the decision</string>
+			<key>c</key>
+			<string>influence course curricula nationwide</string>
+			<key>d</key>
+			<string>appease conservative parents</string>
+			<key>e</key>
+			<string>disappoint the book’s fans</string>
+			<key>answer</key>
+			<string>A</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>to have a great deal to say. Being on the list</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+		<key>24</key>
+		<dict>
+			<key>questionType</key>
+			<string>5</string>
+			<key>question</key>
+			<string>The main purpose of the passage is to</string>
+			<key>a</key>
+			<string>shift the focus of a debate</string>
+			<key>b</key>
+			<string>support one side in a debate</string>
+			<key>c</key>
+			<string>suggest a practical solution</string>
+			<key>d</key>
+			<string>revive a discredited idea</string>
+			<key>e</key>
+			<string>promote certain kinds of writing</string>
+			<key>answer</key>
+			<string>A</string>
+			<key>Passage</key>
+			<string>3</string>
+			<key>surrounding</key>
+			<string>NO</string>
+			<key>underline</key>
+			<string>NO</string>
+			<key>italic</key>
+			<string>NO</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

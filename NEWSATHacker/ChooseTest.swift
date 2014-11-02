@@ -37,7 +37,7 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
         self.scroller.alpha = 1
         
         if chapters.count == 0{
-            println(chapters.keys.array)
+
             self.addButtons(0, arr: chapters.keys.array)
         }else{
             
@@ -45,10 +45,16 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
             
             for (var index = 0; index < currentStatus.count; index++){
                 array = array[currentStatus[index] as String]!!
+                println(array)
             }
 
-            self.addButtons(0, arr: (array as [String: AnyObject]).keys.array)
-            
+            if array.isEqual(""){
+                // Check if the it is the last level
+                println(currentStatus)
+            }else{
+                self.addButtons(0, arr: (array as [String: AnyObject]).keys.array)
+            }
+
         }
         
         var gestureReco = UIScreenEdgePanGestureRecognizer(target: self, action: "dragged:")
@@ -90,6 +96,7 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
             
             var label = UILabel(frame: CGRectMake(0, 0, 10, stateButton.frame.height))
             label.text = currentStatus[index] as? String
+            //label.text = label.text! + "😉"
             label.font = UIFont(name: "AvenirNext-Medium", size: 20)
             label.textAlignment = NSTextAlignment.Center
             label.textColor = UIColor.whiteColor()
@@ -232,6 +239,17 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
  
     }
 
+    override func performSegueWithIdentifier(identifier: String?, sender: AnyObject?) {
+        if identifier == "takeTest"{
+        /*
+            var controller: UIViewController = segue.destinationViewController as UIViewController
+            
+            controller.groupName = groupNameToNext
+            controller.billName = billNameToNext
+            controller.bill = billToNext
+        */
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

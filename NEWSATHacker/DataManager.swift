@@ -15,9 +15,15 @@ class DataManager: NSObject {
         let fileManager = NSFileManager()
         var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         path = path.stringByAppendingPathComponent("Chapters.plist")
-        let resource = NSBundle.mainBundle().pathForResource("Chapters", ofType: "plist") as String?
+        var resource = NSBundle.mainBundle().pathForResource("Chapters", ofType: "plist") as String?
         
         var dict = NSDictionary(contentsOfFile: resource!)
+        fileManager.copyItemAtPath(resource!, toPath: path, error: nil)
+        
+        path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        path = path.stringByAppendingPathComponent("2014May4.plist")
+        resource = NSBundle.mainBundle().pathForResource("2014May4", ofType: "plist") as String?
+        dict = NSDictionary(contentsOfFile: resource!)
         fileManager.copyItemAtPath(resource!, toPath: path, error: nil)
 
     }
@@ -27,6 +33,18 @@ class DataManager: NSObject {
         let fileManager = NSFileManager()
         var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         path = path.stringByAppendingPathComponent("Chapters.plist")
+        
+        let dict = NSDictionary(contentsOfFile: path)
+        println(path)
+        return dict as [String: AnyObject]
+        
+    }
+    
+    class func getASectionTest(year: String, month: String, section: String) -> [String: AnyObject]{
+        
+        let fileManager = NSFileManager()
+        var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        path = path.stringByAppendingPathComponent("\(year)\(month)\(section)")
         
         let dict = NSDictionary(contentsOfFile: path)
         println(path)

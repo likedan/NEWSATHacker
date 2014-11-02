@@ -36,18 +36,23 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
         scroller.showsVerticalScrollIndicator = false
         
         menu.addTarget(self, action: "showMenu:", forControlEvents: UIControlEvents.TouchUpInside)
-
         
-        var shadowPath = UIBezierPath(rect: main.bounds)
-        main.layer.masksToBounds = false;
-        main.layer.shadowColor = UIColor.whiteColor().CGColor
-        main.layer.shadowOffset = CGSizeMake(3.0, 0.0);
-        main.layer.shadowOpacity = 0.5;
-        main.layer.shadowPath = shadowPath.CGPath;
+        self.addShadow(main)
+        
         
         //Do any additional setup after loading the view.
         //self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
         
+    }
+    
+    func addShadow(shadow: UIView){
+        var shadowPath = UIBezierPath(rect: shadow.bounds)
+        shadow.layer.masksToBounds = false;
+        shadow.layer.shadowColor = UIColor.blackColor().CGColor
+        shadow.layer.shadowOffset = CGSizeMake(3.0, 0.0);
+        shadow.layer.shadowOpacity = 0.5;
+        shadow.layer.shadowPath = shadowPath.CGPath;
+
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -64,19 +69,13 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
             choose.userInteractionEnabled = true
         }
     }
-   
-    func scrollViewDidScrollToTop(scrollView: UIScrollView) {
-        scrollToTop()
-    }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        if !decelerate{
             autoScroll()
-        }
     }
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
-        autoScroll()
-    }
+
+
+
     
     func autoScroll(){
         if scroller.contentOffset.y > 150{
@@ -114,7 +113,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
         
         if translation.x > 0 && translation.x < 200{
             self.main.frame = CGRectMake(-self.main.frame.width + 120 + translation.x, 0, self.main.frame.width, self.main.frame.height)
-            self.menuTable.frame = CGRectMake(-self.main.frame.width + 120 + translation.x, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)
+            self.menuTable.frame = CGRectMake(-self.main.frame.width + 440 + translation.x, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)
             self.menu.transform = CGAffineTransformMakeRotation(3.14/2 - (3.14/2) * translation.x / 200)        }
         if recognizer.state == UIGestureRecognizerState.Cancelled || recognizer.state == UIGestureRecognizerState.Failed || recognizer.state == UIGestureRecognizerState.Ended{
             
@@ -128,7 +127,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
         UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
             self.main.frame = CGRectMake(0, 0, self.main.frame.width, self.main.frame.height)
-            self.menuTable.frame = CGRectMake(0, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)
+            self.menuTable.frame = CGRectMake(320, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)
             self.menu.transform = CGAffineTransformMakeRotation(0)
 
             }
@@ -141,7 +140,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
         UIView.animateWithDuration(0.4, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
             self.main.frame = CGRectMake(-self.main.frame.width + 120, 0, self.main.frame.width, self.main.frame.height)
-            self.menuTable.frame = CGRectMake(-self.main.frame.width + 120, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)
+            self.menuTable.frame = CGRectMake(-self.main.frame.width + 440, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)
             self.menu.transform = CGAffineTransformMakeRotation(3.14/2)
             
             }
