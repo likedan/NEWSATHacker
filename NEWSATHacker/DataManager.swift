@@ -44,10 +44,11 @@ class DataManager: NSObject {
         
         let fileManager = NSFileManager()
         var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
-        path = path.stringByAppendingPathComponent("\(year)\(month)\(section)")
+        path = path.stringByAppendingPathComponent("\(year)\(month)\(section).plist")
         
         let dict = NSDictionary(contentsOfFile: path)
         println(path)
+        println(dict)
         return dict as [String: AnyObject]
         
     }

@@ -21,7 +21,6 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
     
     var level: Int = 0
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +49,8 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
 
             if array.isEqual(""){
                 // Check if the it is the last level
-                println(currentStatus)
+                takeTest()
+                
             }else{
                 self.addButtons(0, arr: (array as [String: AnyObject]).keys.array)
             }
@@ -180,7 +180,6 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
 
         button.addSubview(label)
         scroller.addSubview(button)
-
         
         UIView.animateWithDuration(0.1, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
@@ -239,15 +238,15 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
  
     }
 
-    override func performSegueWithIdentifier(identifier: String?, sender: AnyObject?) {
-        if identifier == "takeTest"{
-        /*
-            var controller: UIViewController = segue.destinationViewController as UIViewController
-            
-            controller.groupName = groupNameToNext
-            controller.billName = billNameToNext
-            controller.bill = billToNext
-        */
+    func takeTest(){
+        performSegueWithIdentifier("takeTest", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        
+        if segue.identifier == "takeTest"{
+            var controller: TakeTestViewController = segue.destinationViewController as TakeTestViewController
+            controller.sectionInfo = currentStatus
         }
     }
     

@@ -24,8 +24,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT HACKer😉" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ITm-SW-Fh6">
-                                        <rect key="frame" x="20" y="19" width="208" height="43"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAT HACKer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ITm-SW-Fh6">
+                                        <rect key="frame" x="20" y="19" width="177" height="43"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="31"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,7 +47,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
                                             <containerView opaque="NO" contentMode="scaleToFill" id="6id-Gw-2S1">
-                                                <rect key="frame" x="0.0" y="358" width="320" height="700"/>
+                                                <rect key="frame" x="0.0" y="358" width="320" height="1000"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <connections>
                                                     <segue destination="P7b-Ps-cI8" kind="embed" id="7ti-Q3-j2w"/>
@@ -57,7 +57,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="359"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                 <connections>
-                                                    <segue destination="xNr-6f-K3F" kind="embed" id="HJI-kK-NyU"/>
+                                                    <segue destination="xNr-6f-K3F" kind="embed" id="kGs-Ss-cP7"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -71,7 +71,6 @@
                         </subviews>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="choose" destination="3lr-hi-wsD" id="4TY-eW-9Qn"/>
                         <outlet property="main" destination="kFw-tR-4pq" id="v2W-f0-4Yi"/>
@@ -109,6 +108,7 @@
                     <connections>
                         <outlet property="scroller" destination="Txr-fF-oPW" id="u0o-Zx-nb0"/>
                         <outlet property="stateButton" destination="aXz-g8-Agi" id="KfQ-Ha-GQj"/>
+                        <segue destination="jQH-4v-aZr" kind="modal" identifier="takeTest" id="l4m-MB-dzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8g-43-lQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,19 +225,44 @@
             </objects>
             <point key="canvasLocation" x="411" y="-111"/>
         </scene>
-        <!--View Controller-->
+        <!--Take Test View Controller-->
         <scene sceneID="Tpz-M1-0fw">
             <objects>
-                <viewController id="jQH-4v-aZr" sceneMemberID="viewController">
+                <viewController id="jQH-4v-aZr" customClass="TakeTestViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GjE-sp-jhO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="jKr-C2-wG0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <segue destination="ux8-nf-0Wg" kind="embed" id="W7M-7H-MbZ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="w12-iO-KzB">
+                                <rect key="frame" x="0.0" y="423" width="320" height="74"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="RKm-04-sIL" kind="embed" id="SB5-iN-qOb"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="XEm-jH-Fbp">
+                                <rect key="frame" x="0.0" y="497" width="320" height="71"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="azq-Ep-m3u" kind="embed" id="M4o-Ux-B0e"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zka-Xe-Y0l"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nJ-c4-X9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="978" y="-301"/>
+            <point key="canvasLocation" x="974" y="-412"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="uWG-x2-vW3">
@@ -430,6 +455,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoE-9W-ME4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-30" y="-1137"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="Udv-P4-Lnp">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ux8-nf-0Wg" customClass="ContentViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ovb-nU-h5k">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pe7-z9-55V">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ux8-nf-0Wg" id="xTd-xX-BPX"/>
+                                </connections>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" id="m2K-ft-LgJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ux8-nf-0Wg" id="fx1-nC-xWT"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="contentBoard" destination="pe7-z9-55V" id="NFL-Oe-JdW"/>
+                        <outlet property="draftBoard" destination="m2K-ft-LgJ" id="5p4-Fl-sac"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2q5-MU-Jdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="-746.5"/>
+        </scene>
+        <!--Choices View Controller-->
+        <scene sceneID="2hg-8i-59V">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="RKm-04-sIL" customClass="ChoicesViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uMh-sv-3ZP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5Z-aA-vUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204" y="103"/>
+        </scene>
+        <!--Dragger View Controller-->
+        <scene sceneID="AUr-nt-PmS">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="azq-Ep-m3u" customClass="DraggerViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rdm-Gl-OoX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8m-Kv-Gft" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-139.5"/>
         </scene>
     </scenes>
     <resources>
