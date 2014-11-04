@@ -7,11 +7,10 @@
 //
 
 #import "SmoothLineView.h"
-#import "SATHackerDataManager.h"
 #import <QuartzCore/QuartzCore.h>
 
 #define DEFAULT_COLOR [UIColor blackColor]
-#define DEFAULT_WIDTH [[[SATHackerDataManager getOptionInfo] objectForKey:@"penSize"] doubleValue]
+#define DEFAULT_WIDTH 3.0
 
 @interface SmoothLineView ()
 

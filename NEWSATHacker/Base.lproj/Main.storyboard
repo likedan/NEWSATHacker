@@ -471,20 +471,13 @@
                                     <outlet property="delegate" destination="ux8-nf-0Wg" id="xTd-xX-BPX"/>
                                 </connections>
                             </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" id="m2K-ft-LgJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <connections>
-                                    <outlet property="delegate" destination="ux8-nf-0Wg" id="fx1-nC-xWT"/>
-                                </connections>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="contentBoard" destination="pe7-z9-55V" id="NFL-Oe-JdW"/>
-                        <outlet property="draftBoard" destination="m2K-ft-LgJ" id="5p4-Fl-sac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2q5-MU-Jdt" userLabel="First Responder" sceneMemberID="firstResponder"/>
