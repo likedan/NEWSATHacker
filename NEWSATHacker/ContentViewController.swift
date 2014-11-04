@@ -16,16 +16,19 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var backOfContent : UIView!
     @IBOutlet var backOfDraft : UIView!
 
+    var horizontalScrollEnabled = true
     
-    var views : [UIView]!
+    var parentView: TakeTestViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
+        
+        parentView = self.parentViewController as TakeTestViewController
         
         var count: CGFloat = 0
         backOfContent = UIView(frame: CGRectMake(0, 0, 440, 0))
@@ -36,7 +39,7 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
         backOfDraft.userInteractionEnabled = true
         backOfDraft.backgroundColor = UIColor.clearColor()
 
-        for item in views{
+        for item in parentView.views{
             item.frame = CGRectMake(0, count, item.frame.width, item.frame.height)
             backOfContent.addSubview(item)
             count = count + (item as UIView).frame.height
@@ -45,19 +48,70 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
             backOfDraft.addSubview(draft)
         }
         
-        backOfContent.frame = CGRectMake(0, 0, 440, views[views.count - 1].frame.origin.y + views[views.count - 1].frame.height)
+        backOfContent.frame = CGRectMake(3, 0, 440, parentView.views[parentView.views.count - 1].frame.origin.y + parentView.views[parentView.views.count - 1].frame.height)
         backOfDraft.frame = backOfContent.frame
         backOfContent.addSubview(backOfDraft)
         contentBoard.contentSize = CGSizeMake(440, backOfContent.frame.height)
         contentBoard.addSubview(backOfContent)
-        
-        contentBoard.minimumZoomScale = 0.7
+        contentBoard.minimumZoomScale = 0.73
         contentBoard.maximumZoomScale = 1
+        contentBoard.pinchGestureRecognizer.enabled = false
+        
+        var tapper = UITapGestureRecognizer(target: self, action: "zoom:")
+        tapper.numberOfTapsRequired = 2
+        contentBoard.addGestureRecognizer(tapper)
+    }
+    
+    @IBAction func zoom(recognizer : UITapGestureRecognizer) {
+        
+        if contentBoard.zoomScale == 1{
+            contentBoard.setZoomScale(0.73, animated: true)
+        }else if contentBoard.zoomScale == 0.73{
+            contentBoard.setZoomScale(1, animated: true)
+        }
+        
+    }
+
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        parentView.scrollViewInControl = "content"
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
+        if !horizontalScrollEnabled{
+            contentBoard.contentOffset.x = 0
+        }
+        
+        if parentView.scrollViewInControl == "content"{
+            
+            if scrollView == contentBoard{
+                
+                rescaleScrollViewOffset()
+                //println((parentView.childViewControllers[2] as DraggerViewController).numbersBoard.contentOffset.x)
+            }
+        }
+    }
+    
+    func rescaleScrollViewOffset(){
+    
+        (parentView.childViewControllers[2] as DraggerViewController).numbersBoard.contentOffset = CGPointMake((parentView.childViewControllers[2] as DraggerViewController).calculateNumberOffset(self.contentBoard.contentOffset.y / contentBoard.zoomScale), 0)
+        (parentView.childViewControllers[2] as DraggerViewController).dragBoard.contentOffset = CGPointMake(self.contentBoard.contentOffset.y / contentBoard.zoomScale, 0)
+        
     }
     
     func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView!, atScale scale: CGFloat) {
-        scrollView.scrollEnabled = true
+        
+        if scale == 0.73{
+            horizontalScrollEnabled = false
+        }else{
+            horizontalScrollEnabled = true
+        }
+        
+        rescaleScrollViewOffset()
+        
     }
+
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         if scrollView == contentBoard{
@@ -66,7 +120,17 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
             return nil
         }
     }
-
+   
+    func toPortrait(){
+        contentBoard.minimumZoomScale = 0.73
+        contentBoard.setZoomScale(0.73, animated: true)
+    }
+    
+    func toLandscape(){
+        contentBoard.minimumZoomScale = 1
+        contentBoard.setZoomScale(1, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

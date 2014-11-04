@@ -234,24 +234,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" id="jKr-C2-wG0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <segue destination="ux8-nf-0Wg" kind="embed" id="W7M-7H-MbZ"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="w12-iO-KzB">
-                                <rect key="frame" x="0.0" y="423" width="320" height="74"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="XEm-jH-Fbp">
+                                <rect key="frame" x="0.0" y="500" width="320" height="68"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="RKm-04-sIL" kind="embed" id="SB5-iN-qOb"/>
+                                    <segue destination="RKm-04-sIL" kind="embed" id="6by-TE-ukX"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" id="XEm-jH-Fbp">
-                                <rect key="frame" x="0.0" y="497" width="320" height="71"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" id="w12-iO-KzB">
+                                <rect key="frame" x="0.0" y="440" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="azq-Ep-m3u" kind="embed" id="M4o-Ux-B0e"/>
+                                    <segue destination="azq-Ep-m3u" kind="embed" id="aZj-99-aaV"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -259,6 +259,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zka-Xe-Y0l"/>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="choices" destination="XEm-jH-Fbp" id="AVo-9w-yOO"/>
+                        <outlet property="content" destination="jKr-C2-wG0" id="xkz-G3-lv9"/>
+                        <outlet property="dragger" destination="w12-iO-KzB" id="Y5Z-Fe-oZl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nJ-c4-X9d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -461,11 +466,11 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="ux8-nf-0Wg" customClass="ContentViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ovb-nU-h5k">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pe7-z9-55V">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="ux8-nf-0Wg" id="xTd-xX-BPX"/>
@@ -475,7 +480,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
-                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="contentBoard" destination="pe7-z9-55V" id="NFL-Oe-JdW"/>
                     </connections>
@@ -489,7 +493,7 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="RKm-04-sIL" customClass="ChoicesViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uMh-sv-3ZP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -497,18 +501,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5Z-aA-vUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204" y="103"/>
+            <point key="canvasLocation" x="991" y="130"/>
         </scene>
         <!--Dragger View Controller-->
         <scene sceneID="AUr-nt-PmS">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="azq-Ep-m3u" customClass="DraggerViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rdm-Gl-OoX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="tBy-Px-DFQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.4941176471" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="azq-Ep-m3u" id="Kg3-iJ-6vO"/>
+                                </connections>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fZL-xt-Ta2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="azq-Ep-m3u" id="sUA-5g-gxO"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="dragBoard" destination="fZL-xt-Ta2" id="JkS-fo-9oO"/>
+                        <outlet property="numbersBoard" destination="tBy-Px-DFQ" id="qp9-ZY-GRX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8m-Kv-Gft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
