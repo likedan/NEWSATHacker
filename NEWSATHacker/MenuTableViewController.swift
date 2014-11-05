@@ -59,15 +59,12 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         
         //itemBack.frame = UIColor(red: 111.0/255, green: 111.0/255, blue: 111.0/255, alpha: 1)
         
-        
         // Do any additional setup after loading the view.
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

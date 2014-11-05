@@ -12,9 +12,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet var dragBoard : UIScrollView!
     @IBOutlet var numbersBoard : UIScrollView!
-
-    @IBOutlet var backOfContent : UIView!
-
     
     var parentView: TakeTestViewController!
     
@@ -43,7 +40,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
             aLab.text = "\(index + 1)"
             aLab.textAlignment = NSTextAlignment.Center
             aLab.textColor = UIColor.whiteColor()
-            aLab.font = UIFont(name: "AvenirNext-Medium", size: 40)
+            aLab.font = UIFont(name: "AvenirNext-Medium", size: 20)
             aLab.userInteractionEnabled = true
             view.addSubview(aLab)
             
@@ -51,15 +48,10 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
             labels.append(view)
             
         }
-        
         numbersBoard.contentSize = CGSizeMake(CGFloat(parentView.views.count + 1) * 60, 60)
+        numbersBoard.contentOffset = CGPointMake(0, 15)
         
-        dragBoard.contentSize = CGSizeMake(totalHeight, 60)
-        
-        backOfContent = UIView(frame: CGRectMake(0, 0, totalHeight, 60))
-        backOfContent.userInteractionEnabled = false
-        backOfContent.backgroundColor = UIColor.clearColor()
-        dragBoard.addSubview(backOfContent)
+        dragBoard.contentSize = CGSizeMake(totalHeight, 30)
         
         var tapper = UITapGestureRecognizer(target: self, action: "tapped:")
         self.dragBoard.addGestureRecognizer(tapper)
@@ -69,7 +61,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     }
     
     @IBAction func tapped(recognizer : UITapGestureRecognizer) {
-        
         
         (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
         
@@ -98,9 +89,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         
     }
 
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-        return backOfContent
-    }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         parentView.scrollViewInControl = "dragger"
@@ -118,7 +106,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func rescaleScrollViewOffset(){
-        self.numbersBoard.contentOffset = CGPointMake(calculateNumberOffset(self.dragBoard.contentOffset.x), 0)
+        self.numbersBoard.contentOffset = CGPointMake(calculateNumberOffset(self.dragBoard.contentOffset.x), numbersBoard.contentOffset.y)
         (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset = CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, self.dragBoard.contentOffset.x * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale)
     }
     

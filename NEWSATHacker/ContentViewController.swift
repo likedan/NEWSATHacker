@@ -95,7 +95,7 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
     
     func rescaleScrollViewOffset(){
     
-        (parentView.childViewControllers[2] as DraggerViewController).numbersBoard.contentOffset = CGPointMake((parentView.childViewControllers[2] as DraggerViewController).calculateNumberOffset(self.contentBoard.contentOffset.y / contentBoard.zoomScale), 0)
+        (parentView.childViewControllers[2] as DraggerViewController).numbersBoard.contentOffset = CGPointMake((parentView.childViewControllers[2] as DraggerViewController).calculateNumberOffset(self.contentBoard.contentOffset.y / contentBoard.zoomScale), (parentView.childViewControllers[2] as DraggerViewController).numbersBoard.contentOffset.y)
         (parentView.childViewControllers[2] as DraggerViewController).dragBoard.contentOffset = CGPointMake(self.contentBoard.contentOffset.y / contentBoard.zoomScale, 0)
         
     }

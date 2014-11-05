@@ -14,6 +14,13 @@ class TakeTestViewController: UIViewController {
     @IBOutlet var dragger : UIView!
     @IBOutlet var choices : UIView!
 
+    @IBOutlet var header : UIView!
+    
+    @IBOutlet var completion : UILabel!
+    @IBOutlet var menu : UIButton!
+    
+
+    
     var scrollViewInControl = "content"
     
     var views : [UIView]!

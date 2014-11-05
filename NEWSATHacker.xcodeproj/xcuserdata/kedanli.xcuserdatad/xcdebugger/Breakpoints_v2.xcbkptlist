@@ -484,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NEWSATHacker/TakeTestViewController.swift"
-            timestampString = "436827017.549854"
+            timestampString = "436848975.27329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "willAnimateRotationToInterfaceOrientation(_:duration:)"
             landmarkType = "5">
          </BreakpointContent>
