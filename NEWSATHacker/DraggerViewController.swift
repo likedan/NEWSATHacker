@@ -153,6 +153,8 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     func toPortrait(){
         for item in labels{
             item.transform = CGAffineTransformMakeRotation(0)
+            dragBoard.contentOffset.y = 15
+            
         }
     }
     override func didReceiveMemoryWarning() {
