@@ -18,7 +18,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     
     var parentView: TakeTestViewController!
     
-    var labels = [UILabel]()
+    var labels = [UIView]()
     
     var totalHeight: CGFloat!
     
@@ -36,14 +36,19 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         
         for var index = 0; index < parentView.views.count; index++ {
             
-            var aLab = UILabel(frame: CGRectMake(60 + CGFloat(index) * 60, 0, 60, 60))
+            var view = UIView(frame: CGRectMake(60 + CGFloat(index) * 60, 0, 60, 60))
+            view.userInteractionEnabled = true
+            
+            var aLab = UILabel(frame: CGRectMake(0, 0, 60, 60))
             aLab.text = "\(index + 1)"
             aLab.textAlignment = NSTextAlignment.Center
             aLab.textColor = UIColor.whiteColor()
             aLab.font = UIFont(name: "AvenirNext-Medium", size: 40)
             aLab.userInteractionEnabled = true
-            numbersBoard.addSubview(aLab)
-            labels.append(aLab)
+            view.addSubview(aLab)
+            
+            numbersBoard.addSubview(view)
+            labels.append(view)
             
         }
         
@@ -59,9 +64,14 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         var tapper = UITapGestureRecognizer(target: self, action: "tapped:")
         self.dragBoard.addGestureRecognizer(tapper)
 
+        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
+
     }
     
     @IBAction func tapped(recognizer : UITapGestureRecognizer) {
+        
+        
+        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
         
         var point = recognizer.locationInView(numbersBoard)
         
@@ -72,14 +82,18 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         }else if currentQuestion >= parentView.views.count{
             currentQuestion = parentView.views.count - 1
         }
+
+        parentView.currentQuestion = currentQuestion
+        
+        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
         
         if parentView.scrollViewInControl == "dragger"{
         
-            self.dragBoard.setContentOffset(CGPointMake(parentView.views[currentQuestion].frame.origin.y, 0), animated: true)
+            self.dragBoard.setContentOffset(CGPointMake(parentView.views[currentQuestion].frame.origin.y - 30, 0), animated: true)
         
         }else if parentView.scrollViewInControl == "content"{
             
-            (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, parentView.views[currentQuestion].frame.origin.y * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale), animated: true)
+            (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, (parentView.views[currentQuestion].frame.origin.y - 30) * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale), animated: true)
         }
         
     }
@@ -100,9 +114,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
                 rescaleScrollViewOffset()
                 
             }
-            println(self.numbersBoard.contentOffset.x)
-            println((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.y)
-
         }
     }
     
@@ -114,32 +125,37 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     //user approximation to calculate offset
     func calculateNumberOffset(x: CGFloat)->CGFloat{
         
-        
-        var approximate: Int = Int(x / totalHeight * CGFloat(parentView.views.count))
+       var approximate = getCurrentQuestion(x)
+        return CGFloat(approximate * 60) + (x - parentView.views[approximate].frame.origin.y) / parentView.views[approximate].frame.height * 60
+    }
+    
+    func getCurrentQuestion(index: CGFloat)->Int{
+        var approximate: Int = Int(index / totalHeight * CGFloat(parentView.views.count))
         if approximate < 0{
             approximate = 0
         }else if approximate >= parentView.views.count{
             approximate = parentView.views.count - 1
         }
         
-        while parentView.views[approximate].frame.origin.y > x{
+        while parentView.views[approximate].frame.origin.y > index{
             approximate--
             if approximate < 0{
                 approximate = 0
                 break
             }
         }
-        while parentView.views[approximate].frame.origin.y + parentView.views[approximate].frame.height < x{
+        while parentView.views[approximate].frame.origin.y + parentView.views[approximate].frame.height < index{
             approximate++
             if approximate >= parentView.views.count{
                 approximate = parentView.views.count - 1
                 break
             }
         }
-        println(approximate)
         
-        return CGFloat(approximate * 60) + (x - parentView.views[approximate].frame.origin.y) / parentView.views[approximate].frame.height * 60
+        return approximate
     }
+    
+    
     
     func toLandscape(){
         for item in labels{

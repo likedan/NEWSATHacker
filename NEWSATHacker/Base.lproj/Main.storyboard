@@ -108,7 +108,7 @@
                     <connections>
                         <outlet property="scroller" destination="Txr-fF-oPW" id="u0o-Zx-nb0"/>
                         <outlet property="stateButton" destination="aXz-g8-Agi" id="KfQ-Ha-GQj"/>
-                        <segue destination="jQH-4v-aZr" kind="modal" identifier="takeTest" id="l4m-MB-dzW"/>
+                        <segue destination="jQH-4v-aZr" kind="modal" identifier="takeTest" modalTransitionStyle="crossDissolve" id="l4m-MB-dzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8g-43-lQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,14 +241,14 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="XEm-jH-Fbp">
-                                <rect key="frame" x="0.0" y="500" width="320" height="68"/>
+                                <rect key="frame" x="0.0" y="504" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="RKm-04-sIL" kind="embed" id="6by-TE-ukX"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" id="w12-iO-KzB">
-                                <rect key="frame" x="0.0" y="440" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="440" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="azq-Ep-m3u" kind="embed" id="aZj-99-aaV"/>
@@ -453,7 +453,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
                 </viewController>
@@ -493,11 +493,74 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="RKm-04-sIL" customClass="ChoicesViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uMh-sv-3ZP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ViW-OQ-BeT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gdh-CG-sKO">
+                                <rect key="frame" x="5" y="12" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circleButtonW.png">
+                                    <color key="titleColor" red="0.97712719689799321" green="0.97158883726037204" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZJT-d2-LP7">
+                                <rect key="frame" x="58" y="12" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circleButtonW.png">
+                                    <color key="titleColor" red="0.97712719690000005" green="0.97158883730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EPt-gZ-uTn">
+                                <rect key="frame" x="111" y="12" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circleButtonW.png">
+                                    <color key="titleColor" red="0.97712719690000005" green="0.97158883730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MWb-bo-z3p">
+                                <rect key="frame" x="164" y="12" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circleButtonW.png">
+                                    <color key="titleColor" red="0.97712719690000005" green="0.97158883730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qW3-Qz-k4s">
+                                <rect key="frame" x="217" y="12" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circleButtonW.png">
+                                    <color key="titleColor" red="0.97712719690000005" green="0.97158883730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PLU-QU-SiW">
+                                <rect key="frame" x="270" y="12" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="circleButtonW.png">
+                                    <color key="titleColor" red="0.97712719690000005" green="0.97158883730000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4941176471" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="a" destination="Gdh-CG-sKO" id="x95-Pd-NVn"/>
+                        <outlet property="b" destination="ZJT-d2-LP7" id="qJz-mX-BQl"/>
+                        <outlet property="c" destination="EPt-gZ-uTn" id="DmB-3I-fvr"/>
+                        <outlet property="d" destination="MWb-bo-z3p" id="mqj-eO-3y0"/>
+                        <outlet property="e" destination="qW3-Qz-k4s" id="MVe-ay-Uc0"/>
+                        <outlet property="u" destination="PLU-QU-SiW" id="ep7-De-KPf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y5Z-aA-vUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -508,11 +571,16 @@
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="azq-Ep-m3u" customClass="DraggerViewController" customModule="NEWSATHacker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rdm-Gl-OoX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ato-EY-7Op">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.88748996776614841" green="0.86132039206633959" blue="0.88896322513812154" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="tBy-Px-DFQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="4" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.4941176471" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -520,7 +588,7 @@
                                 </connections>
                             </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fZL-xt-Ta2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="4" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="azq-Ep-m3u" id="sUA-5g-gxO"/>
@@ -541,6 +609,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circleButtonW.png" width="300" height="300"/>
         <image name="more.png" width="163" height="163"/>
         <image name="whiteslide.png" width="640" height="200"/>
     </resources>
