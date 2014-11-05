@@ -10,6 +10,8 @@ import UIKit
 
 class MenuTableViewController: UIViewController, UIScrollViewDelegate{
     
+    @IBOutlet var menuLabel : UILabel!
+    
     @IBOutlet var scroller : UIScrollView!
     @IBOutlet var settings : UIButton!
     @IBOutlet var account : UIButton!
@@ -27,7 +29,7 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scroller.contentSize = CGSizeMake(200, 600)
+        scroller.contentSize = CGSizeMake(200, 508)
         scroller.showsVerticalScrollIndicator = false
         scroller.showsHorizontalScrollIndicator = false
         
@@ -36,46 +38,48 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         var itemBack = UIImage(named: "line.png")
         var itemBackView = UIImageView(image: itemBack)
         //self.view.addSubview(itemBackView)
+        var itemColor = UIColor(red: 148.0/255, green: 148.0/255, blue: 148.0/255, alpha: 1)
+        
+        
 
         account.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        account.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        account.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        account.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        account.tintColor = itemColor
 
         
         settings.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        settings.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        settings.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        settings.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        settings.tintColor = itemColor
 
 
         ranking.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        ranking.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        ranking.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        ranking.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        ranking.tintColor = itemColor
 
 
         buyTests.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        buyTests.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        buyTests.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        buyTests.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        buyTests.tintColor = itemColor
 
 
         history.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        history.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        history.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        history.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        history.tintColor = itemColor
 
 
         aboutUs.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        aboutUs.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        aboutUs.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        aboutUs.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        aboutUs.tintColor = itemColor
 
 
         guidance.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        guidance.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        guidance.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+        guidance.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        guidance.tintColor = itemColor
 
 
         friends.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        friends.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
-        friends.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
-
+        friends.titleLabel?.font = UIFont(name: "Avenir Next", size: 18)
+        friends.tintColor = itemColor
 
         
 
@@ -84,21 +88,32 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         var titleBackView = UIImageView(image: titleBack)
         titleBackView.frame = CGRectMake(0, 0, 200, 40)
         
+        var titleColor = UIColor(red: 79.0/255, green: 78.0/255, blue: 78.0/255, alpha: 1)
+        
         
         personal.addSubview(titleBackView)
-        
+        personal.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        personal.textColor = titleColor
+            
         titleBackView = UIImageView(image: titleBack)
         titleBackView.frame = CGRectMake(0, 0, 200, 40)
         
         options.addSubview(titleBackView)
+        options.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        options.textColor = titleColor
+
         
         titleBackView = UIImageView(image: titleBack)
         titleBackView.frame = CGRectMake(0, 0, 200, 40)
         
         more.addSubview(titleBackView)
+        more.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        more.textColor = titleColor
+
 
         
-        
+        menuLabel.textColor = titleColor
+
 
         
         //itemBack.alpha = 0.7
