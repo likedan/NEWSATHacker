@@ -258,7 +258,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="b52-ej-q7o">
-                                        <rect key="frame" x="0.0" y="26" width="320" height="4"/>
+                                        <rect key="frame" x="0.0" y="26" width="440" height="4"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
@@ -288,9 +288,11 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="choices" destination="XEm-jH-Fbp" id="AVo-9w-yOO"/>
+                        <outlet property="completion" destination="E55-f6-pT7" id="hVX-5Q-Sef"/>
                         <outlet property="content" destination="jKr-C2-wG0" id="xkz-G3-lv9"/>
                         <outlet property="dragger" destination="w12-iO-KzB" id="Y5Z-Fe-oZl"/>
                         <outlet property="header" destination="7pU-Fx-ITc" id="MQg-we-6Fg"/>
+                        <outlet property="menu" destination="T7B-2J-Ub3" id="KmD-ff-ljT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6nJ-c4-X9d" userLabel="First Responder" sceneMemberID="firstResponder"/>

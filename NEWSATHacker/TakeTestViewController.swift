@@ -41,9 +41,12 @@ class TakeTestViewController: UIViewController {
     
     override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
         if toInterfaceOrientation == UIInterfaceOrientation.Portrait || toInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown {
-            content.frame = CGRectMake(0, 0, 320, 440)
+            header.frame = CGRectMake(0, 0, 320, 30)
+            header.alpha = 1
+            menu.frame = CGRectMake(menu.frame.origin.x - 120, menu.frame.origin.y, menu.frame.width, menu.frame.height)
+            content.frame = CGRectMake(0, 30, 320, 440)
             dragger.transform = CGAffineTransformMakeRotation(0)
-            dragger.frame = CGRectMake(0, 440, 320, 64)
+            dragger.frame = CGRectMake(0, 470, 320, 34)
             choices.transform = CGAffineTransformMakeRotation(0)
             choices.frame = CGRectMake(0, 504, 320, 64)
 
@@ -53,6 +56,12 @@ class TakeTestViewController: UIViewController {
 
         }
         else if toInterfaceOrientation == UIInterfaceOrientation.LandscapeLeft || toInterfaceOrientation == UIInterfaceOrientation.LandscapeRight{
+            
+            header.frame = CGRectMake(64, 0, 440, 30)
+            header.alpha = 0.5
+            
+            menu.frame = CGRectMake(menu.frame.origin.x + 120, menu.frame.origin.y, menu.frame.width, menu.frame.height)
+            
             content.frame = CGRectMake(64, 0, 440, 320)
             dragger.transform = CGAffineTransformMakeRotation(3.14/2)
             dragger.frame = CGRectMake(0, 0, 64, 320)
