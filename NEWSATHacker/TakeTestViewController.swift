@@ -41,6 +41,7 @@ class TakeTestViewController: UIViewController {
     
     override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
         if toInterfaceOrientation == UIInterfaceOrientation.Portrait || toInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown {
+            header.frame = CGRectMake(0, 0, 320, 30)
             content.frame = CGRectMake(0, 0, 320, 440)
             dragger.transform = CGAffineTransformMakeRotation(0)
             dragger.frame = CGRectMake(0, 440, 320, 64)

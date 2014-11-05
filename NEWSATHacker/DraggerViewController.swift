@@ -148,13 +148,14 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     func toLandscape(){
         for item in labels{
             item.transform = CGAffineTransformMakeRotation(-3.14 / 2)
+            (item.subviews[0] as UILabel).font = UIFont(name: "AvenirNext-Medium", size: 40)
         }
     }
     func toPortrait(){
         for item in labels{
             item.transform = CGAffineTransformMakeRotation(0)
             dragBoard.contentOffset.y = 15
-            
+            (item.subviews[0] as UILabel).font = UIFont(name: "AvenirNext-Medium", size: 20)
         }
     }
     override func didReceiveMemoryWarning() {
