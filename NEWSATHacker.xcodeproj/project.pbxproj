@@ -40,6 +40,7 @@
 		42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775E19FC43EE000D5C73 /* MainViewController.swift */; };
 		42D9776119FC682E000D5C73 /* HACKer.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D9776019FC682E000D5C73 /* HACKer.png */; };
 		882627EA1A09BA8600655451 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 882627E91A09BA8600655451 /* line.png */; };
+		882627EC1A09C58800655451 /* titleline.png in Resources */ = {isa = PBXBuildFile; fileRef = 882627EB1A09C58800655451 /* titleline.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		42D9775E19FC43EE000D5C73 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42D9776019FC682E000D5C73 /* HACKer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HACKer.png; sourceTree = "<group>"; };
 		882627E91A09BA8600655451 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = Images/line.png; sourceTree = "<group>"; };
+		882627EB1A09C58800655451 /* titleline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = titleline.png; path = Images/titleline.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				4202B9AD1A094A57009393EB /* circleButtonW.png */,
 				42C34A3D1A03593A0070E2DD /* backWhite.png */,
 				42C9EFE11A02C68E00617E45 /* more.png */,
+				882627EB1A09C58800655451 /* titleline.png */,
 				882627E91A09BA8600655451 /* line.png */,
 				42D9776019FC682E000D5C73 /* HACKer.png */,
 				42C34A3F1A042D220070E2DD /* circleButton.png */,
@@ -306,6 +309,7 @@
 				42C34A401A042D220070E2DD /* circleButton.png in Resources */,
 				42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */,
 				42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */,
+				882627EC1A09C58800655451 /* titleline.png in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
 				882627EA1A09BA8600655451 /* line.png in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,

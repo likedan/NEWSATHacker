@@ -20,6 +20,9 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
     @IBOutlet var guidance : UIButton!
     @IBOutlet var friends : UIButton!
     
+    @IBOutlet var personal : UILabel!
+    @IBOutlet var options : UILabel!
+    @IBOutlet var more : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,23 +38,67 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         //self.view.addSubview(itemBackView)
 
         account.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        account.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        account.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
         
         settings.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        settings.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        settings.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
 
         ranking.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        ranking.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        ranking.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
 
         buyTests.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        buyTests.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        buyTests.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
 
         history.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        history.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        history.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
 
         aboutUs.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        
+        aboutUs.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        aboutUs.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
+
         guidance.setBackgroundImage(itemBack, forState: UIControlState.Normal)
-        
+        guidance.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        guidance.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
+
         friends.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        friends.titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
+        friends.tintColor = UIColor(red: 124.0/255, green: 194.0/255, blue: 228.0/255, alpha: 1)
+
+
         
 
 
+        var titleBack = UIImage(named: "titleline")
+        var titleBackView = UIImageView(image: titleBack)
+        titleBackView.frame = CGRectMake(0, 0, 200, 40)
+        
+        
+        personal.addSubview(titleBackView)
+        
+        titleBackView = UIImageView(image: titleBack)
+        titleBackView.frame = CGRectMake(0, 0, 200, 40)
+        
+        options.addSubview(titleBackView)
+        
+        titleBackView = UIImageView(image: titleBack)
+        titleBackView.frame = CGRectMake(0, 0, 200, 40)
+        
+        more.addSubview(titleBackView)
+
+        
+        
 
         
         //itemBack.alpha = 0.7
