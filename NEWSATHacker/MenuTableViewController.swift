@@ -26,9 +26,36 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         
         scroller.contentSize = CGSizeMake(200, 600)
         scroller.showsVerticalScrollIndicator = false
+        scroller.showsHorizontalScrollIndicator = false
         
-        var itemBack = UIImageView(frame: CGRectMake(0, 0, 200, 40))
-        itemBack.alpha = 0.7
+
+        
+        var itemBack = UIImage(named: "line.png")
+        var itemBackView = UIImageView(image: itemBack)
+        //self.view.addSubview(itemBackView)
+
+        account.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        
+        settings.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+
+        ranking.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+
+        buyTests.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+
+        history.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+
+        aboutUs.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        
+        guidance.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        
+        friends.setBackgroundImage(itemBack, forState: UIControlState.Normal)
+        
+
+
+
+        
+        //itemBack.alpha = 0.7
+        
         
         //itemBack.frame = UIColor(red: 111.0/255, green: 111.0/255, blue: 111.0/255, alpha: 1)
         

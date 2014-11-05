@@ -39,6 +39,7 @@
 		42C9EFEF1A02FF3300617E45 /* Chapters.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42C9EFEE1A02FF3300617E45 /* Chapters.plist */; };
 		42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D9775E19FC43EE000D5C73 /* MainViewController.swift */; };
 		42D9776119FC682E000D5C73 /* HACKer.png in Resources */ = {isa = PBXBuildFile; fileRef = 42D9776019FC682E000D5C73 /* HACKer.png */; };
+		882627EA1A09BA8600655451 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 882627E91A09BA8600655451 /* line.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		42C9EFEE1A02FF3300617E45 /* Chapters.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chapters.plist; sourceTree = "<group>"; };
 		42D9775E19FC43EE000D5C73 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		42D9776019FC682E000D5C73 /* HACKer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HACKer.png; sourceTree = "<group>"; };
+		882627E91A09BA8600655451 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line.png; path = Images/line.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				4202B9AD1A094A57009393EB /* circleButtonW.png */,
 				42C34A3D1A03593A0070E2DD /* backWhite.png */,
 				42C9EFE11A02C68E00617E45 /* more.png */,
+				882627E91A09BA8600655451 /* line.png */,
 				42D9776019FC682E000D5C73 /* HACKer.png */,
 				42C34A3F1A042D220070E2DD /* circleButton.png */,
 				42C9EFE51A02CD7600617E45 /* triangularButton.png */,
@@ -304,6 +307,7 @@
 				42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */,
 				42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
+				882627EA1A09BA8600655451 /* line.png in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,
 				42C9EFE21A02C68E00617E45 /* more.png in Resources */,
 				42C5217A19D3E40F0036E862 /* Images.xcassets in Resources */,
@@ -467,7 +471,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -484,7 +488,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
