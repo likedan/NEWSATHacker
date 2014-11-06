@@ -93,8 +93,7 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
         
         for (var index = 0; index < currentStatus.count; index++){
             
-            
-            var label = UILabel(frame: CGRectMake(0, 0, 10, stateButton.frame.height))
+            var label = UILabel(frame: CGRectMake(20, 0, 10, stateButton.frame.height))
             label.text = currentStatus[index] as? String
             //label.text = label.text! + "😉"
             label.font = UIFont(name: "AvenirNext-Medium", size: 20)
@@ -102,28 +101,25 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
             label.textColor = UIColor.whiteColor()
             label.sizeToFit()
             label.alpha = 0
-
+            
+            var button: UIButton!
             if stateButtons.count == 0 {
             
-                var button = UIButton(frame: CGRectMake(310 - label.frame.width, 0, label.frame.width, label.frame.height))
-                button.addTarget(self, action: "returnButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-                button.addSubview(label)
-                stateButton.addSubview(button)
-                stateButtons.append(button)
-                
+                button = UIButton(frame: CGRectMake(10, 0, label.frame.width + 20, label.frame.height))
             }else{
-                
-                var button = UIButton(frame: CGRectMake((stateButtons[stateButtons.count - 1] as UIView).frame.origin.x - label.frame.width - 10, 0, label.frame.width, label.frame.height))
-                button.addTarget(self, action: "returnButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
-                button.addSubview(label)
-                stateButton.addSubview(button)
-                stateButtons.append(button)
-
-                var img = UIImageView(frame: CGRectMake(button.frame.width + button.frame.origin.x, 8, 10, 10))
-                img.image = UIImage(named:"backWhite")
-                stateButton.addSubview(img)
-                
+                button = UIButton(frame: CGRectMake((stateButtons[stateButtons.count - 1] as UIView).frame.origin.x + (stateButtons[stateButtons.count - 1] as UIView).frame.width, 0, label.frame.width + 20, label.frame.height))
             }
+            
+            button.addTarget(self, action: "returnButtonClicked:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.addSubview(label)
+            stateButton.addSubview(button)
+            stateButtons.append(button)
+            
+            var img = UIImageView(frame: CGRectMake(0, 3, 20, 20))
+            img.image = UIImage(named:"backWhite")
+            //img.transform = CGAffineTransformMakeRotation(3.14)
+            button.addSubview(img)
+            
             var delay: NSTimeInterval = NSTimeInterval(index) * 0.2
             
             UIView.animateWithDuration(0.2, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: {

@@ -17,6 +17,8 @@ class ChoicesViewController: UIViewController {
     @IBOutlet var e : UIButton!
     @IBOutlet var u : UIButton!
 
+    var parentView: TakeTestViewController!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +28,13 @@ class ChoicesViewController: UIViewController {
 
     override func viewDidAppear(animated: Bool) {
         
+        parentView = self.parentViewController as TakeTestViewController
+        
         var aLab = UILabel(frame: CGRectMake(0, 0, a.frame.width, a.frame.height))
         aLab.text = "A"
         aLab.textAlignment = NSTextAlignment.Center
         aLab.textColor = UIColor.whiteColor()
         aLab.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        aLab.userInteractionEnabled = true
         a.addSubview(aLab)
 
         aLab = UILabel(frame: CGRectMake(1, 1, a.frame.width, a.frame.height))
@@ -39,7 +42,6 @@ class ChoicesViewController: UIViewController {
         aLab.textAlignment = NSTextAlignment.Center
         aLab.textColor = UIColor.whiteColor()
         aLab.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        aLab.userInteractionEnabled = true
         b.addSubview(aLab)
         
         aLab = UILabel(frame: CGRectMake(-2, 2, a.frame.width, a.frame.height))
@@ -47,7 +49,6 @@ class ChoicesViewController: UIViewController {
         aLab.textAlignment = NSTextAlignment.Center
         aLab.textColor = UIColor.whiteColor()
         aLab.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        aLab.userInteractionEnabled = true
         c.addSubview(aLab)
         
         aLab = UILabel(frame: CGRectMake(1, 1, a.frame.width, a.frame.height))
@@ -55,7 +56,6 @@ class ChoicesViewController: UIViewController {
         aLab.textAlignment = NSTextAlignment.Center
         aLab.textColor = UIColor.whiteColor()
         aLab.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        aLab.userInteractionEnabled = true
         d.addSubview(aLab)
         
         aLab = UILabel(frame: CGRectMake(0, 1, a.frame.width, a.frame.height))
@@ -63,7 +63,6 @@ class ChoicesViewController: UIViewController {
         aLab.textAlignment = NSTextAlignment.Center
         aLab.textColor = UIColor.whiteColor()
         aLab.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        aLab.userInteractionEnabled = true
         e.addSubview(aLab)
         
         aLab = UILabel(frame: CGRectMake(0, 1, a.frame.width, a.frame.height))
@@ -71,10 +70,26 @@ class ChoicesViewController: UIViewController {
         aLab.textAlignment = NSTextAlignment.Center
         aLab.textColor = UIColor.whiteColor()
         aLab.font = UIFont(name: "AvenirNext-Medium", size: 38)
-        aLab.userInteractionEnabled = true
         u.addSubview(aLab)
+        
+        a.addTarget(self, action: "choose:", forControlEvents: UIControlEvents.TouchUpInside)
+        b.addTarget(self, action: "choose:", forControlEvents: UIControlEvents.TouchUpInside)
+        c.addTarget(self, action: "choose:", forControlEvents: UIControlEvents.TouchUpInside)
+        d.addTarget(self, action: "choose:", forControlEvents: UIControlEvents.TouchUpInside)
+        e.addTarget(self, action: "choose:", forControlEvents: UIControlEvents.TouchUpInside)
+        u.addTarget(self, action: "choose:", forControlEvents: UIControlEvents.TouchUpInside)
+
     }
 
+    @IBAction func choose(sender: AnyObject){
+        
+        //println((sender as UIButton).subviews)
+        var theChoice: String = ((sender as UIButton).subviews[1] as UILabel).text!
+        
+        (parentView.childViewControllers[2] as DraggerViewController).choiceChosen(theChoice, question: parentView.currentQuestion)
+        
+        
+    }
     
     func toLandscape(){
         let trans = CGAffineTransformMakeRotation(3.14 / 2)
