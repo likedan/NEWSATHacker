@@ -23,20 +23,30 @@ class TakeTestViewController: UIViewController {
     
     var scrollViewInControl = "dragger"
     
+    var allFontSize: CGFloat = 18.0
+    
     var views: [UIView]!
     
     var timer = NSTimer()
     
     var sectionInfo: [AnyObject]!
     
+    var testData: [String: AnyObject]!
+    
     var answeredQuestion: Int = 0
     var currentQuestion: Int = 0
     
+    var passageController: PassageViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         var str: String = (sectionInfo[1] as NSString).substringToIndex(1) as String
         let generator: GenerateContentForTest = GenerateContentForTest()
-        views = generator.generateContent(DataManager.getASectionTest(sectionInfo[0] as String, month: sectionInfo[1] as String, section: (sectionInfo[2] as NSString).substringToIndex(1) as String))
+        
+        testData = DataManager.getASectionTest(sectionInfo[0] as String, month: sectionInfo[1] as String, section: (sectionInfo[2] as NSString).substringToIndex(1) as String)
+        
+        views = generator.generateContent(testData)
         
         currentQuestion = 0
         
@@ -49,6 +59,16 @@ class TakeTestViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        passageController = self.storyboard!.instantiateViewControllerWithIdentifier("passageBoard")! as PassageViewController
+        self.addChildViewController(passageController)
+        passageController.didMoveToParentViewController(self)
+        passageController.view.frame = CGRectMake(0, 30, 320, 440)
+        self.view.addSubview(passageController.view)
+
+    }
+    
     override func willAnimateRotationToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
         if toInterfaceOrientation == UIInterfaceOrientation.Portrait || toInterfaceOrientation == UIInterfaceOrientation.PortraitUpsideDown {
             header.frame = CGRectMake(0, 0, 320, 30)
@@ -59,9 +79,7 @@ class TakeTestViewController: UIViewController {
             choices.frame = CGRectMake(0, 504, 320, 64)
             
             self.header.frame = CGRectMake(0, 0, 320, 30)
-           
-
-            
+                       
             (self.childViewControllers[0] as ContentViewController).toPortrait()
             (self.childViewControllers[1] as ChoicesViewController).toPortrait()
             (self.childViewControllers[2] as DraggerViewController).toPortrait()

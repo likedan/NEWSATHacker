@@ -15,6 +15,7 @@ class GenerateContentForTest: NSObject {
    
     var theFontSize: CGFloat = 18.0
     
+    
     func generateContent(content:[String: AnyObject])->[UIView]{
         
         var result = [UIView]()
@@ -41,8 +42,6 @@ class GenerateContentForTest: NSObject {
             textView.userInteractionEnabled = false
             textView.sizeToFit()
             
-            println(textView.frame.height)
-            println(textView.frame.width)
 
             result.append(textView)
             //content =
@@ -52,5 +51,88 @@ class GenerateContentForTest: NSObject {
         return result
         
     }
+    
+    
+    func generatePassage(content:[String: AnyObject])->[AnyObject]{
+        
+        var result = [AnyObject]()
+        
+        if content["type"] as String == "reading"{
+            result = self.generateContentForReadingPassage(content) as [AnyObject]
+        }
+        
+        return result
+        
+    }
+    
+    func generateContentForReadingPassage(data: [String: AnyObject])->[AnyObject]{
+        
+        var result = [AnyObject]()
+        
+        for items in (data["Passages"] as [AnyObject]){
+            
+            var aPassage = [UIView]()
+
+            var text = UITextView(frame: CGRectMake(15, 0, 430, 100))
+            text.editable = false
+            text.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: theFontSize)
+            text.text = "\n\n\n\nQuestions " + (items["questions"] as String) + " are based on the following passage."
+            text.sizeToFit()
+            
+            aPassage.append(text)
+            println(text.frame)
+
+            
+            if items["italic"] as String != ""{
+            
+                text = UITextView(frame: CGRectMake(15, 0, 430, 100))
+                text.editable = false
+                text.font = UIFont(name: "TimesNewRomanPS-ItalicMT", size: theFontSize)
+                text.text = items["italic"] as String
+                text.sizeToFit()
+                
+                aPassage.append(text)
+                println(text.frame)
+            }
+
+            if items["style"] as String == "normal"{
+            
+                text = UITextView(frame: CGRectMake(15, 0, 430, 100))
+                text.editable = false
+                text.font = UIFont(name: "TimesNewRomanPSMT", size: theFontSize)
+                text.text = items["body"] as String
+                text.sizeToFit()
+                
+                aPassage.append(text)
+                println(text.frame)
+            
+            }
+            
+            for var index = 1; index < aPassage.count; index++ {
+                aPassage[index].frame = CGRectMake(aPassage[index].frame.origin.x, aPassage[index - 1].frame.origin.y + aPassage[index - 1].frame.height, aPassage[index].frame.width, aPassage[index].frame.height)
+                }
+            
+            var labelContainer = UIView(frame: CGRectMake(0, 0, 25, 20))
+            
+            for var index = 1; index <= Int(aPassage[aPassage.count - 1].frame.height / 103.5); index++ {
+                
+                var leftNumbers = UILabel(frame: CGRectMake(-5, -10 + CGFloat(index) * 103.5 + aPassage[aPassage.count - 1].frame.origin.y, 25, 20))
+                leftNumbers.textAlignment = NSTextAlignment.Center
+                leftNumbers.text = "\(index * 5)"
+                leftNumbers.font = UIFont(name: "TimesNewRomanPS-ItalicMT", size: 13)
+                labelContainer.addSubview(leftNumbers)
+            }
+            labelContainer.frame = CGRectMake(0, 0, 25, labelContainer.subviews[labelContainer.subviews.count - 1].frame.origin.y + labelContainer.subviews[labelContainer.subviews.count - 1].frame.height)
+            aPassage.append(labelContainer)
+            
+            result.append(aPassage)
+            
+        }
+        
+        return result
+        
+    }
+
+    
     
 }

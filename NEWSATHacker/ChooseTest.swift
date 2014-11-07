@@ -44,7 +44,6 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
             
             for (var index = 0; index < currentStatus.count; index++){
                 array = array[currentStatus[index] as String]!!
-                println(array)
             }
 
             if array.isEqual(""){
@@ -195,9 +194,7 @@ class ChooseTest: UIViewController, UITextFieldDelegate{
     @IBAction func returnButtonClicked(sender: AnyObject){
     
         for (var index = currentStatus.count - 1; index >= 0; index--){
-            println(currentStatus[index])
-            println((sender.subviews[0] as UILabel).text!)
-            if currentStatus[index] as String == (sender.subviews[0] as UILabel).text!{
+             if currentStatus[index] as String == (sender.subviews[0] as UILabel).text!{
                 currentStatus.removeAtIndex(index);
                 break;
             }else{

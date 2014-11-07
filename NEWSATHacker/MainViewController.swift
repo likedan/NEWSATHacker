@@ -108,9 +108,7 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
     @IBAction func dragged(recognizer : UIPanGestureRecognizer) {
         
         let translation = recognizer.translationInView(self.view)
-        
-        println(translation)
-        
+                
         if translation.x > 0 && translation.x < 200{
             self.main.frame = CGRectMake(-self.main.frame.width + 120 + translation.x, 0, self.main.frame.width, self.main.frame.height)
             self.menuTable.frame = CGRectMake(-self.main.frame.width + 440 + translation.x, self.menuTable.frame.origin.y, self.menuTable.frame.width, self.menuTable.frame.height)

@@ -93,7 +93,6 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
             if scrollView == contentBoard{
                 
                 rescaleScrollViewOffset()
-                //println((parentView.childViewControllers[2] as DraggerViewController).numbersBoard.contentOffset.x)
             }
         }
     }

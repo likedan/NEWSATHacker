@@ -83,7 +83,6 @@ class ChoicesViewController: UIViewController {
 
     @IBAction func choose(sender: AnyObject){
         
-        //println((sender as UIButton).subviews)
         var theChoice: String = ((sender as UIButton).subviews[1] as UILabel).text!
         
         (parentView.childViewControllers[2] as DraggerViewController).choiceChosen(theChoice, question: parentView.currentQuestion)

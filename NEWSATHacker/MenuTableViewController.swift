@@ -102,7 +102,6 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         options.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
         options.textColor = titleColor
 
-        
         titleBackView = UIImageView(image: titleBack)
         titleBackView.frame = CGRectMake(0, 0, 200, 40)
         
@@ -110,14 +109,9 @@ class MenuTableViewController: UIViewController, UIScrollViewDelegate{
         more.font = UIFont(name: "AvenirNext-DemiBold", size: 18)
         more.textColor = titleColor
 
-
-        
         menuLabel.textColor = titleColor
 
-
-        
         //itemBack.alpha = 0.7
-        
         
         //itemBack.frame = UIColor(red: 111.0/255, green: 111.0/255, blue: 111.0/255, alpha: 1)
         

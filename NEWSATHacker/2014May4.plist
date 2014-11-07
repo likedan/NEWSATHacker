@@ -10,9 +10,11 @@
 			<key>italic</key>
 			<string></string>
 			<key>body</key>
-			<string>    In between school days, we gathered hazelnuts, fished, had long deer-hunting weekends, went to  powwows, beaded on looms, and made quilts. I did not question the necessity or value of our school education,  but somehow I grew up knowing it wasn’t the onlyeducation I would need. I’m thankful for those experiences of my Anishinaabe heritage, because now I know by heart not only the national anthem, but the ancient song of the loon. I recognize not only the alphabet and the parts of an English sentence, but the intricate language of a beaver’s teeth and tail.</string>
+			<string>    In between school days, we gathered hazelnuts, fished, had long deer-hunting weekends, went to powwows, beaded on looms, and made quilts. I did not question the necessity or value of our school education,  but somehow I grew up knowing it wasn’t the onlyeducation I would need. I’m thankful for those experiences of my Anishinaabe heritage, because now I know by heart not only the national anthem, but the ancient song of the loon. I recognize not only the alphabet and the parts of an English sentence, but the intricate language of a beaver’s teeth and tail.</string>
 			<key>style</key>
 			<string>normal</string>
+			<key>questions</key>
+			<string>9-10</string>
 		</dict>
 		<dict>
 			<key>italic</key>
@@ -22,6 +24,8 @@
 So it seems, anyway. Yet given what scientists know about how brains work, even the ability to perceive a  paper clip on a messy desk represents an extraordinary  and mysterious achievement.</string>
 			<key>style</key>
 			<string>normal</string>
+			<key>questions</key>
+			<string>11-12</string>
 		</dict>
 		<dict>
 			<key>italic</key>
@@ -33,16 +37,10 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
     In that country of real readers, voluntary, active, self- determined readers, a debate like the current one over the canon would not be taking place. Or if it did, it would be as a kind of parlor game:  What books would you take to a desert island? Everyone would know that the top-ten list was merely a tiny fraction of the books one would read in a lifetime. It would not seem racist or sexist or hopelessly hidebound to put Nathaniel Hawthorne on the list and not Toni Morrison.2 It would be more like putting oatmeal and not noodles on the breakfast menu—a choice partly arbitrary, partly a nod to the national past, and partly, dare one say it, a kind of reverse affirmative action:  School might frankly be the place where one reads the books that are a little off-putting, that have gone a little cold, that you might overlook because they do not address, in reader- friendly contemporary fashion, the issues most immediately at stake in modern life but that, with a little study, turn out to have a great deal to say. Being on the list wouldn’t mean so much. It might even add to a writer’s cachet not to be on the list, to be in one way or another too heady, too daring, too exciting to be ground up into institutional fodder for teenagers. Generations of high school kids have been turned off to George Eliot by being forced to read Silas Marner at a tender age. One can imagine a whole new readership for her if grown-ups were left to approach Middlemarch and Daniel Deronda with open minds, at their leisure.</string>
 			<key>style</key>
 			<string>normal</string>
+			<key>questions</key>
+			<string>13-23</string>
 		</dict>
 	</array>
-	<key>Passage1offset</key>
-	<string>88</string>
-	<key>Passage2offset</key>
-	<string>88</string>
-	<key>Passage3italic</key>
-	<string></string>
-	<key>Passage3offset</key>
-	<string>170</string>
 	<key>Questions</key>
 	<array>
 		<dict>

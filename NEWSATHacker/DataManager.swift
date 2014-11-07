@@ -48,7 +48,6 @@ class DataManager: NSObject {
         
         let dict = NSDictionary(contentsOfFile: path)
         println(path)
-        println(dict)
         return dict as [String: AnyObject]
         
     }
