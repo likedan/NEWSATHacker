@@ -253,27 +253,6 @@
                                     <segue destination="azq-Ep-m3u" kind="embed" id="aZj-99-aaV"/>
                                 </connections>
                             </containerView>
-                            <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="g4o-OO-4cM">
-                                <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="F9B-u0-9IH">
-                                        <rect key="frame" x="0.0" y="26" width="320" height="4"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Xd-hb-94T">
-                                        <rect key="frame" x="8" y="0.0" width="50" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                        <state key="normal" title="MENU">
-                                            <color key="titleColor" red="0.96353182510000002" green="0.97304852080000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.4941176471" green="0.76078431369999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7pU-Fx-ITc">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,18 +262,20 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/24" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E55-f6-pT7">
-                                        <rect key="frame" x="8" y="2" width="66" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <color key="textColor" red="0.96353182510000002" green="0.97304852080000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="T7B-2J-Ub3">
                                         <rect key="frame" x="268" y="0.0" width="50" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                         <state key="normal" title="MENU">
+                                            <color key="titleColor" red="0.96353182510000002" green="0.97304852080000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iLw-JA-qgY">
+                                        <rect key="frame" x="8" y="-2" width="50" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <state key="normal" title="0 / 24">
                                             <color key="titleColor" red="0.96353182510000002" green="0.97304852080000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -317,11 +298,10 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="choices" destination="XEm-jH-Fbp" id="AVo-9w-yOO"/>
-                        <outlet property="completion" destination="E55-f6-pT7" id="XWj-eY-6wr"/>
+                        <outlet property="completion" destination="iLw-JA-qgY" id="y8n-cT-iqp"/>
                         <outlet property="content" destination="jKr-C2-wG0" id="xkz-G3-lv9"/>
                         <outlet property="dragger" destination="w12-iO-KzB" id="Y5Z-Fe-oZl"/>
                         <outlet property="header" destination="7pU-Fx-ITc" id="MQg-we-6Fg"/>
-                        <outlet property="horizontalMenu" destination="g4o-OO-4cM" id="Jdh-Eu-rcG"/>
                         <outlet property="menu" destination="T7B-2J-Ub3" id="IFq-RG-W8D"/>
                         <outlet property="switcher" destination="18Q-XT-r9l" id="QjX-z2-vrN"/>
                     </connections>
@@ -629,7 +609,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pe7-z9-55V">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.72999999999999998" id="pe7-z9-55V">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="445"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>

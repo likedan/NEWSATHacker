@@ -16,14 +16,12 @@ class TakeTestViewController: UIViewController {
     
     @IBOutlet var header : UIView!
     
-    @IBOutlet var completion : UILabel!
+    @IBOutlet var completion : UIButton!
     @IBOutlet var menu : UIButton!
     
     @IBOutlet var switcher : UIButton!
     
-    @IBOutlet var horizontalMenu : UIView!
-    
-    var scrollViewInControl = "content"
+    var scrollViewInControl = "dragger"
     
     var views: [UIView]!
     
@@ -55,6 +53,7 @@ class TakeTestViewController: UIViewController {
             choices.transform = CGAffineTransformMakeRotation(0)
             choices.frame = CGRectMake(0, 504, 320, 64)
             
+            self.header.frame = CGRectMake(0, 0, 320, 30)
             
             (self.childViewControllers[0] as ContentViewController).toPortrait()
             (self.childViewControllers[1] as ChoicesViewController).toPortrait()
@@ -68,7 +67,7 @@ class TakeTestViewController: UIViewController {
             choices.transform = CGAffineTransformMakeRotation(-3.14/2)
             choices.frame = CGRectMake(504, 0, 64, 320)
             
-            self.horizontalMenu.frame = CGRectMake(0, 0, 60, 30)
+            self.header.frame = CGRectMake(0, 0, 60, 30)
             
             (self.childViewControllers[0] as ContentViewController).toLandscape()
             (self.childViewControllers[1] as ChoicesViewController).toLandscape()

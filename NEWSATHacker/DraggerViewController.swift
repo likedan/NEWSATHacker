@@ -70,7 +70,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     
     @IBAction func tapped(recognizer : UITapGestureRecognizer) {
         
-        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
         
         var point = recognizer.locationInView(numbersBoard)
         
@@ -81,6 +80,8 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         }else if currentQuestion >= parentView.views.count{
             currentQuestion = parentView.views.count - 1
         }
+
+        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
 
         parentView.currentQuestion = currentQuestion
         
@@ -156,6 +157,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     }
     
     func getCurrentQuestion(index: CGFloat)->Int{
+        
         var approximate: Int = Int(index / totalHeight * CGFloat(parentView.views.count))
         if approximate < 0{
             approximate = 0
@@ -186,7 +188,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     func toLandscape(){
         for item in labels{
             item.transform = CGAffineTransformMakeRotation(-3.14 / 2)
-            dragBoard.contentOffset.y = 15
             if (item.subviews[1] as UILabel).text == ""{
                 (item.subviews[0] as UILabel).font = UIFont(name: "AvenirNext-Medium", size: 40)
             }else{
@@ -199,6 +200,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     func toPortrait(){
         for item in labels{
             item.transform = CGAffineTransformMakeRotation(0)
+            dragBoard.contentOffset.y = 15
             if (item.subviews[1] as UILabel).text != ""{
                 (item.subviews[0] as UILabel).frame = CGRectMake(0, 0, 60, 60)
             }

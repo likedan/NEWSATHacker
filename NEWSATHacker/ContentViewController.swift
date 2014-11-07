@@ -53,8 +53,9 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
         backOfContent.addSubview(backOfDraft)
         contentBoard.contentSize = CGSizeMake(440, backOfContent.frame.height)
         contentBoard.addSubview(backOfContent)
-        contentBoard.minimumZoomScale = 0.73
-        contentBoard.maximumZoomScale = 1
+        //don't call the delegate function early avoid nil error
+        contentBoard.setZoomScale(0.73, animated: false)
+        
         contentBoard.pinchGestureRecognizer.enabled = false
         
         var tapper = UITapGestureRecognizer(target: self, action: "zoom:")
