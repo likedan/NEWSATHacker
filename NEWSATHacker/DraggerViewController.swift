@@ -223,7 +223,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     func toPortrait(){
         for item in labels{
             item.transform = CGAffineTransformMakeRotation(0)
-            dragBoard.contentOffset.y = 15
+            numbersBoard.contentOffset.y = 15
             if (item.subviews[1] as UILabel).text != ""{
                 (item.subviews[0] as UILabel).frame = CGRectMake(0, 0, 60, 60)
             }
