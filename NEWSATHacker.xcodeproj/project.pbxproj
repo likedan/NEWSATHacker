@@ -18,6 +18,7 @@
 		4202B9B21A0B376A009393EB /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4202B9B01A0B376A009393EB /* pen.png */; };
 		42088F8A1A06B3980079AEBB /* 2014May4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42088F891A06B3980079AEBB /* 2014May4.plist */; };
 		4221E5B01A069B5300D81918 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */; };
+		42B2D52F1A0C95AF00314779 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B2D52E1A0C95AF00314779 /* CoreData.framework */; };
 		42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3D1A03593A0070E2DD /* backWhite.png */; };
 		42C34A401A042D220070E2DD /* circleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3F1A042D220070E2DD /* circleButton.png */; };
 		42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */; };
@@ -69,6 +70,7 @@
 		4202B9B01A0B376A009393EB /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pen.png; path = Images/pen.png; sourceTree = "<group>"; };
 		42088F891A06B3980079AEBB /* 2014May4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2014May4.plist; sourceTree = "<group>"; };
 		4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		42B2D52E1A0C95AF00314779 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		42C34A3D1A03593A0070E2DD /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
 		42C34A3F1A042D220070E2DD /* circleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circleButton.png; path = Images/circleButton.png; sourceTree = "<group>"; };
 		42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42B2D52F1A0C95AF00314779 /* CoreData.framework in Frameworks */,
 				42C5219D19D507FF0036E862 /* Foundation.framework in Frameworks */,
 				42C5219B19D506170036E862 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -134,6 +137,7 @@
 		42C5216419D3E40F0036E862 = {
 			isa = PBXGroup;
 			children = (
+				42B2D52E1A0C95AF00314779 /* CoreData.framework */,
 				42C5219C19D507FF0036E862 /* Foundation.framework */,
 				42C5219A19D506170036E862 /* CoreGraphics.framework */,
 				42C5216F19D3E40F0036E862 /* NEWSATHacker */,

@@ -87,8 +87,7 @@ class ChoicesViewController: UIViewController {
         var theChoice: String = ((sender as UIButton).subviews[1] as UILabel).text!
         
         (parentView.childViewControllers[2] as DraggerViewController).choiceChosen(theChoice, question: parentView.currentQuestion)
-        
-        
+
     }
     
     func toLandscape(){

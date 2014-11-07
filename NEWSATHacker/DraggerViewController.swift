@@ -82,47 +82,56 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         }
 
         (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
-
-        parentView.currentQuestion = currentQuestion
         
-        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
-        
-        self.moveToCertainQuestion(currentQuestion)
+        self.moveToCertainQuestion(parentView.currentQuestion, toquestion: currentQuestion)
         
     }
     
-    func moveToCertainQuestion(question: Int){
+    func moveToCertainQuestion(fromquestion: Int, toquestion: Int){
         
-        parentView.currentQuestion = question
+        parentView.currentQuestion = toquestion
         
-        (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
+        (labels[fromquestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
+        
+        (labels[toquestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
 
         if parentView.scrollViewInControl == "dragger"{
             
-            self.dragBoard.setContentOffset(CGPointMake(parentView.views[question].frame.origin.y - 30, 0), animated: true)
+            self.dragBoard.setContentOffset(CGPointMake(parentView.views[toquestion].frame.origin.y - 30, 0), animated: true)
             
         }else if parentView.scrollViewInControl == "content"{
             
-            (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, (parentView.views[question].frame.origin.y - 30) * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale), animated: true)
+            (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, (parentView.views[toquestion].frame.origin.y - 30) * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale), animated: true)
         }
         
     }
 
     func choiceChosen(answer: String, question: Int){
         
-        (labels[question].subviews[1] as UILabel).text = answer
         
         // make changes when first time an answer is chosen
+
+        if (labels[question].subviews[1] as UILabel).text == ""{
+            
+            parentView.answeredQuestion++
+            if interfaceOrientation.isLandscape{
+                (labels[question].subviews[0] as UILabel).frame = CGRectMake(0, 0, 45, 45)
+                (labels[question].subviews[0] as UILabel).font = UIFont(name: "AvenirNext-Medium", size: 33)
+            }
+            
+        }
+
+        if interfaceOrientation.isLandscape{
+            parentView.switchMenuAndCompletion()
+        }else{
+            parentView.completionSpin()
+        }
+        (labels[question].subviews[1] as UILabel).text = answer
+
         if (labels[question + 1].subviews[1] as UILabel).text == ""{
             
             if question < labels.count - 1{
-                moveToCertainQuestion(question + 1)
-                
-                if interfaceOrientation.isLandscape{
-                    (labels[question].subviews[0] as UILabel).frame = CGRectMake(0, 0, 45, 45)
-                    (labels[question].subviews[0] as UILabel).font = UIFont(name: "AvenirNext-Medium", size: 33)
-
-                }
+                moveToCertainQuestion(question, toquestion: question + 1)
                 
             }
         }
@@ -154,6 +163,20 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         
        var approximate = getCurrentQuestion(x)
         return CGFloat(approximate * 60) + (x - parentView.views[approximate].frame.origin.y) / parentView.views[approximate].frame.height * 60
+    }
+    
+    func findUppestQuestion(){
+        
+        for var index = 0; index < labels.count; index++ {
+            
+            if (labels[index].subviews[1] as UILabel).text == ""{
+            
+                moveToCertainQuestion(parentView.currentQuestion, toquestion: index)
+                break
+                
+            }
+        }
+        
     }
     
     func getCurrentQuestion(index: CGFloat)->Int{

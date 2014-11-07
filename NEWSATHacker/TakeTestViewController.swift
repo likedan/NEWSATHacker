@@ -25,10 +25,12 @@ class TakeTestViewController: UIViewController {
     
     var views: [UIView]!
     
+    var timer = NSTimer()
+    
     var sectionInfo: [AnyObject]!
     
-    
-    var currentQuestion: Int!
+    var answeredQuestion: Int = 0
+    var currentQuestion: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,9 @@ class TakeTestViewController: UIViewController {
         var gestureReco = UIPanGestureRecognizer(target: self, action: "dragged:")
         switcher.addGestureRecognizer(gestureReco)
         switcher.addTarget(self, action: "switcheMode:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        completion.addTarget(self.childViewControllers[2], action: "findUppestQuestion", forControlEvents: UIControlEvents.TouchUpInside)
+
         // Do any additional setup after loading the view.
     }
     
@@ -54,6 +59,8 @@ class TakeTestViewController: UIViewController {
             choices.frame = CGRectMake(0, 504, 320, 64)
             
             self.header.frame = CGRectMake(0, 0, 320, 30)
+           
+
             
             (self.childViewControllers[0] as ContentViewController).toPortrait()
             (self.childViewControllers[1] as ChoicesViewController).toPortrait()
@@ -68,6 +75,7 @@ class TakeTestViewController: UIViewController {
             choices.frame = CGRectMake(504, 0, 64, 320)
             
             self.header.frame = CGRectMake(0, 0, 60, 30)
+        
             
             (self.childViewControllers[0] as ContentViewController).toLandscape()
             (self.childViewControllers[1] as ChoicesViewController).toLandscape()
@@ -114,7 +122,7 @@ class TakeTestViewController: UIViewController {
                 }else if switcher.center.y >= (320.0 / 568) * switcher.center.x && switcher.center.y < -(320.0 / 568) * switcher.center.x + 320{
                     
                     UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                        self.switcher.center.y = self.switcher.frame.height / 2
+                        self.switcher.center.x = self.switcher.frame.width / 2
                         }
                         , completion: {
                             (value: Bool) in
@@ -123,7 +131,7 @@ class TakeTestViewController: UIViewController {
                 }else if switcher.center.y < (320.0 / 568) * switcher.center.x && switcher.center.y < -(320.0 / 568) * switcher.center.x + 320{
                     
                     UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
-                        self.switcher.center.x = self.switcher.frame.width / 2
+                        self.switcher.center.y = self.switcher.frame.height / 2
                         }
                         , completion: {
                             (value: Bool) in
@@ -177,6 +185,71 @@ class TakeTestViewController: UIViewController {
                 }
             }
         }
+        
+    }
+    
+    func switchMenuAndCompletion(){
+        
+        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.menu.transform = CGAffineTransformMake(1, 0, 0, 0.0001, 0, 0)
+            }
+            , completion: {
+                (value: Bool) in
+                self.menu.setTitle("\(self.answeredQuestion) / \(self.views.count)", forState: UIControlState.Normal)
+        })
+        UIView.animateWithDuration(0.8, delay: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.menu.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0)
+
+            }
+            , completion: {
+                (value: Bool) in
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: Selector("wait"), userInfo: nil, repeats: false)
+        })
+        
+
+       
+
+    }
+
+    
+    func wait(){
+        
+        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.menu.transform = CGAffineTransformMake(1, 0, 0, 0.0001, 0, 0)
+            
+            }
+            , completion: {
+                (value: Bool) in
+                self.menu.setTitle("MENU", forState: UIControlState.Normal)
+        })
+        
+        UIView.animateWithDuration(0.8, delay: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.menu.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0)
+            
+            }
+            , completion: {
+                (value: Bool) in
+        })
+        timer.invalidate()
+    }
+    
+    func completionSpin(){
+        
+        UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            self.completion.transform = CGAffineTransformMake(1, 0, 0, 0.0001, 0, 0)
+            }
+            , completion: {
+                (value: Bool) in
+                self.completion.setTitle("\(self.answeredQuestion) / \(self.views.count)", forState: UIControlState.Normal)
+                UIView.animateWithDuration(0.8, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                    self.completion.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0)
+                    }
+                    , completion: {
+                        (value: Bool) in
+                })
+                
+        })
+
         
     }
     
