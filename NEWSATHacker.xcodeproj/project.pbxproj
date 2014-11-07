@@ -19,6 +19,7 @@
 		42088F8A1A06B3980079AEBB /* 2014May4.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42088F891A06B3980079AEBB /* 2014May4.plist */; };
 		4221E5B01A069B5300D81918 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */; };
 		42B2D52F1A0C95AF00314779 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B2D52E1A0C95AF00314779 /* CoreData.framework */; };
+		42B2D5311A0CA31E00314779 /* PassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2D5301A0CA31E00314779 /* PassageViewController.swift */; };
 		42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3D1A03593A0070E2DD /* backWhite.png */; };
 		42C34A401A042D220070E2DD /* circleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3F1A042D220070E2DD /* circleButton.png */; };
 		42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */; };
@@ -71,6 +72,7 @@
 		42088F891A06B3980079AEBB /* 2014May4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 2014May4.plist; sourceTree = "<group>"; };
 		4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		42B2D52E1A0C95AF00314779 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		42B2D5301A0CA31E00314779 /* PassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassageViewController.swift; sourceTree = "<group>"; };
 		42C34A3D1A03593A0070E2DD /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
 		42C34A3F1A042D220070E2DD /* circleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circleButton.png; path = Images/circleButton.png; sourceTree = "<group>"; };
 		42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4202B9A11A087E02009393EB /* ContentViewController.swift */,
 				4202B9A31A087E0F009393EB /* DraggerViewController.swift */,
 				4202B9A51A087E3F009393EB /* ChoicesViewController.swift */,
+				42B2D5301A0CA31E00314779 /* PassageViewController.swift */,
 			);
 			name = TakeTest;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */,
 				4202B9A21A087E02009393EB /* ContentViewController.swift in Sources */,
 				4202B9A41A087E0F009393EB /* DraggerViewController.swift in Sources */,
+				42B2D5311A0CA31E00314779 /* PassageViewController.swift in Sources */,
 				42C9EFEB1A02FBEB00617E45 /* ChooseTest.swift in Sources */,
 				42D9775F19FC43EE000D5C73 /* MainViewController.swift in Sources */,
 				42C34A511A046F0A0070E2DD /* SignUpViewController.swift in Sources */,

@@ -46,6 +46,10 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
             
             var draft = SmoothLineView(frame: item.frame)
             backOfDraft.addSubview(draft)
+            
+            var line = UIImageView(frame: CGRectMake(0, 0, 440, 1))
+            line.backgroundColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
+            draft.addSubview(line)
         }
         
         backOfContent.frame = CGRectMake(3, 0, 440, parentView.views[parentView.views.count - 1].frame.origin.y + parentView.views[parentView.views.count - 1].frame.height)

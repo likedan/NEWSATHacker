@@ -196,6 +196,8 @@ class TakeTestViewController: UIViewController {
             , completion: {
                 (value: Bool) in
                 self.menu.setTitle("\(self.answeredQuestion) / \(self.views.count)", forState: UIControlState.Normal)
+                self.menu.addTarget(self.childViewControllers[2], action: "findUppestQuestion", forControlEvents: UIControlEvents.TouchUpInside)
+
         })
         UIView.animateWithDuration(0.8, delay: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             self.menu.transform = CGAffineTransformMake(1, 0, 0, 1, 0, 0)
@@ -206,8 +208,6 @@ class TakeTestViewController: UIViewController {
                 self.timer = NSTimer.scheduledTimerWithTimeInterval(4.0, target: self, selector: Selector("wait"), userInfo: nil, repeats: false)
         })
         
-
-       
 
     }
 
@@ -221,6 +221,7 @@ class TakeTestViewController: UIViewController {
             , completion: {
                 (value: Bool) in
                 self.menu.setTitle("MENU", forState: UIControlState.Normal)
+                self.menu.removeTarget(self.childViewControllers[2], action: "findUppestQuestion", forControlEvents: UIControlEvents.TouchUpInside)
         })
         
         UIView.animateWithDuration(0.8, delay: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
