@@ -762,8 +762,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="v9R-CG-dKY">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.72999999999999998" id="v9R-CG-dKY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="430"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -771,16 +771,16 @@
                                 </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" id="Ktz-N2-0Fi">
-                                <rect key="frame" x="0.0" y="403" width="320" height="37"/>
+                                <rect key="frame" x="0.0" y="400" width="320" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="45G-KI-oga">
-                                        <rect key="frame" x="0.0" y="32" width="320" height="3"/>
+                                        <rect key="frame" x="0.0" y="30" width="320" height="6"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="3Xe-Ua-zvu">
-                                        <rect key="frame" x="140" y="32" width="40" height="8"/>
+                                        <rect key="frame" x="140" y="30" width="40" height="10"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.8874899678" green="0.8613203921" blue="0.88896322510000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>

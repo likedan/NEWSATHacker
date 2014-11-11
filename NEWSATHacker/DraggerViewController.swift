@@ -28,7 +28,6 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidAppear(animated: Bool) {
         
         parentView = self.parentViewController as TakeTestViewController
-
         totalHeight = parentView.views[parentView.views.count - 1].frame.origin.y + parentView.views[parentView.views.count - 1].frame.height
         
         for var index = 0; index < parentView.views.count; index++ {
@@ -43,7 +42,7 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
             aLab.font = UIFont(name: "AvenirNext-Medium", size: 20)
             aLab.userInteractionEnabled = false
             view.addSubview(aLab)
-            
+
             aLab = UILabel(frame: CGRectMake(40, 20, 20, 20))
             aLab.text = ""
             aLab.textAlignment = NSTextAlignment.Center
@@ -58,22 +57,19 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         }
         numbersBoard.contentSize = CGSizeMake(CGFloat(parentView.views.count + 1) * 60, 60)
         numbersBoard.contentOffset = CGPointMake(0, 15)
-        
         dragBoard.contentSize = CGSizeMake(totalHeight, 30)
         
         var tapper = UITapGestureRecognizer(target: self, action: "tapped:")
         self.dragBoard.addGestureRecognizer(tapper)
 
         (labels[parentView.currentQuestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
-
     }
     
     @IBAction func tapped(recognizer : UITapGestureRecognizer) {
         
-        
         var point = recognizer.locationInView(numbersBoard)
         
-        var currentQuestion: Int = Int(point.x / 60) - 1
+        var currentQuestion:Int = Int(point.x / 60) - 1
         
         if currentQuestion < 0{
             currentQuestion = 0
@@ -87,21 +83,40 @@ class DraggerViewController: UIViewController, UIScrollViewDelegate{
         
     }
     
+
+    
+    
     func moveToCertainQuestion(fromquestion: Int, toquestion: Int){
+        
         
         parentView.currentQuestion = toquestion
         
+        parentView.managePassage()
+                
         (labels[fromquestion].subviews[0] as UILabel).textColor = UIColor.whiteColor()
         
         (labels[toquestion].subviews[0] as UILabel).textColor = UIColor(red: 226.0/255.0, green: 220.0/255.0, blue: 227.0/255.0, alpha: 1)
 
         if parentView.scrollViewInControl == "dragger"{
             
-            self.dragBoard.setContentOffset(CGPointMake(parentView.views[toquestion].frame.origin.y - 30, 0), animated: true)
+            if ((parentView.testData["Questions"] as [AnyObject])[parentView.currentQuestion] as [String: AnyObject])["Passage"] as String == "0"{
+                self.dragBoard.setContentOffset(CGPointMake(parentView.views[toquestion].frame.origin.y - 30, 0), animated: true)
+            }else{
+                
+                var num: CGFloat =  -parentView.passageController.view.frame.height - parentView.passageController.view.frame.origin.y
+
+                self.dragBoard.setContentOffset(CGPointMake(parentView.views[toquestion].frame.origin.y + 180 * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale - 170 + num , 0), animated: true)
+            }
             
         }else if parentView.scrollViewInControl == "content"{
-            
-            (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, (parentView.views[toquestion].frame.origin.y - 30) * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale), animated: true)
+            if ((parentView.testData["Questions"] as [AnyObject])[parentView.currentQuestion] as [String: AnyObject])["Passage"] as String == "0"{
+                
+                (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, (parentView.views[toquestion].frame.origin.y - 30) * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale), animated: true)
+            }else{
+                
+                var num: CGFloat =  -parentView.passageController.view.frame.height - parentView.passageController.view.frame.origin.y
+                (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.setContentOffset(CGPointMake((self.parentView.childViewControllers[0] as ContentViewController).contentBoard.contentOffset.x, (parentView.views[toquestion].frame.origin.y - 40) * (self.parentView.childViewControllers[0] as ContentViewController).contentBoard.zoomScale + 50 + num), animated: true)
+            }
         }
         
     }

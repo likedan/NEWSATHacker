@@ -16,7 +16,7 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var backOfContent : UIView!
     @IBOutlet var backOfDraft : UIView!
 
-    var horizontalScrollEnabled = true
+    var horizontalScrollEnabled = false
     
     var parentView: TakeTestViewController!
     
@@ -69,10 +69,12 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func zoom(recognizer : UITapGestureRecognizer) {
         
-        if contentBoard.zoomScale == 1{
-            contentBoard.setZoomScale(0.73, animated: true)
-        }else if contentBoard.zoomScale == 0.73{
+        println(contentBoard.zoomScale)
+        
+        if contentBoard.zoomScale < 0.74{
             contentBoard.setZoomScale(1, animated: true)
+        }else{
+            contentBoard.setZoomScale(0.73, animated: true)
         }
         
     }
@@ -106,7 +108,7 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
     
     func scrollViewDidEndZooming(scrollView: UIScrollView, withView view: UIView!, atScale scale: CGFloat) {
         
-        if scale == 0.73{
+        if scale < 0.74{
             horizontalScrollEnabled = false
         }else{
             horizontalScrollEnabled = true

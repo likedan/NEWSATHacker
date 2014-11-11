@@ -76,11 +76,10 @@ class GenerateContentForTest: NSObject {
             var text = UITextView(frame: CGRectMake(15, 0, 430, 100))
             text.editable = false
             text.font = UIFont(name: "TimesNewRomanPS-BoldMT", size: theFontSize)
-            text.text = "\n\n\n\nQuestions " + (items["questions"] as String) + " are based on the following passage."
+            text.text = "\n\n\n\n\n\n\nQuestions " + (items["questions"] as String) + " are based on the following passage."
             text.sizeToFit()
             
             aPassage.append(text)
-            println(text.frame)
 
             
             if items["italic"] as String != ""{
@@ -92,7 +91,6 @@ class GenerateContentForTest: NSObject {
                 text.sizeToFit()
                 
                 aPassage.append(text)
-                println(text.frame)
             }
 
             if items["style"] as String == "normal"{
@@ -104,7 +102,6 @@ class GenerateContentForTest: NSObject {
                 text.sizeToFit()
                 
                 aPassage.append(text)
-                println(text.frame)
             
             }
             
@@ -122,7 +119,7 @@ class GenerateContentForTest: NSObject {
                 leftNumbers.font = UIFont(name: "TimesNewRomanPS-ItalicMT", size: 13)
                 labelContainer.addSubview(leftNumbers)
             }
-            labelContainer.frame = CGRectMake(0, 0, 25, labelContainer.subviews[labelContainer.subviews.count - 1].frame.origin.y + labelContainer.subviews[labelContainer.subviews.count - 1].frame.height)
+            labelContainer.frame = CGRectMake(0, 0, 25, labelContainer.subviews[labelContainer.subviews.count - 1].frame.origin.y + labelContainer.subviews[labelContainer.subviews.count - 1].frame.height + 20)
             aPassage.append(labelContainer)
             
             result.append(aPassage)
@@ -133,6 +130,42 @@ class GenerateContentForTest: NSObject {
         
     }
 
-    
+    func calculateIndexOfEachQuestionInReading(testData: [String: AnyObject])->[CGFloat]{
+        var questions = testData["Questions"] as [AnyObject]
+        
+        var indexOfEachQuestion = [CGFloat]()
+        
+        for items in questions{
+            if items["Passage"] as String == "0"{
+                indexOfEachQuestion.append(0)
+            }else{
+                
+                if items["surrounding"] as String == "NO"{
+                    
+                    indexOfEachQuestion.append(0)
+                    
+                }else{
+                    
+                    var passageText = (testData["Passages"] as [AnyObject])[(items["Passage"] as String).toInt()! - 1]["body"] as String
+                    
+                    passageText = passageText.substringToIndex(passageText.rangeOfString(items["surrounding"] as String)!.startIndex)
+                    
+                    var text = UITextView(frame: CGRectMake(0, 0, 430, 5))
+                    text.font = UIFont(name: "TimesNewRomanPSMT", size: theFontSize)
+                    text.text = passageText
+                    text.sizeToFit()
+                    //如果从第一行开始就是
+                    if text.frame.height == 0 {
+                        indexOfEachQuestion.append(1)
+                    }else{
+                        indexOfEachQuestion.append(text.frame.height)
+                    }
+                    println(text.frame)
+                    println(text.text)
+                }
+            }
+        }
+        return indexOfEachQuestion
+    }
     
 }

@@ -61,7 +61,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>D</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -81,7 +81,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>E</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -101,7 +101,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>C</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -121,7 +121,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>B</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -141,7 +141,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>A</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -161,7 +161,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>A</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -181,7 +181,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>E</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
@@ -201,7 +201,7 @@ So it seems, anyway. Yet given what scientists know about how brains work, even 
 			<key>answer</key>
 			<string>C</string>
 			<key>Passage</key>
-			<string>NO</string>
+			<string>0</string>
 		</dict>
 		<dict>
 			<key>questionType</key>
