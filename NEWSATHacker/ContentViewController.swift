@@ -68,9 +68,7 @@ class ContentViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func zoom(recognizer : UITapGestureRecognizer) {
-        
-        println(contentBoard.zoomScale)
-        
+                
         if contentBoard.zoomScale < 0.74{
             contentBoard.setZoomScale(1, animated: true)
         }else{

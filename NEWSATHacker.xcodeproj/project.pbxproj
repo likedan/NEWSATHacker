@@ -20,6 +20,20 @@
 		4221E5B01A069B5300D81918 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */; };
 		42B2D52F1A0C95AF00314779 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42B2D52E1A0C95AF00314779 /* CoreData.framework */; };
 		42B2D5311A0CA31E00314779 /* PassageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B2D5301A0CA31E00314779 /* PassageViewController.swift */; };
+		42B539611A304A0E0064A566 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B539601A304A0E0064A566 /* IntroViewController.swift */; };
+		42B539701A304ACA0064A566 /* 1View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B539631A304ACA0064A566 /* 1View.xib */; };
+		42B539711A304ACA0064A566 /* 1View1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B539641A304ACA0064A566 /* 1View1.png */; };
+		42B539721A304ACA0064A566 /* 1View2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B539651A304ACA0064A566 /* 1View2.png */; };
+		42B539731A304ACA0064A566 /* 1View3.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B539661A304ACA0064A566 /* 1View3.png */; };
+		42B539741A304ACA0064A566 /* 2View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B539671A304ACA0064A566 /* 2View.xib */; };
+		42B539751A304ACA0064A566 /* 2View1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B539681A304ACA0064A566 /* 2View1.png */; };
+		42B539761A304ACA0064A566 /* 2View2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B539691A304ACA0064A566 /* 2View2.png */; };
+		42B539771A304ACA0064A566 /* 3View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B5396A1A304ACA0064A566 /* 3View.xib */; };
+		42B539781A304ACA0064A566 /* 3View1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B5396B1A304ACA0064A566 /* 3View1.png */; };
+		42B539791A304ACA0064A566 /* 3View2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B5396C1A304ACA0064A566 /* 3View2.png */; };
+		42B5397A1A304ACA0064A566 /* 4View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42B5396D1A304ACA0064A566 /* 4View.xib */; };
+		42B5397B1A304ACA0064A566 /* 4View1.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B5396E1A304ACA0064A566 /* 4View1.png */; };
+		42B5397C1A304ACA0064A566 /* 4View2.png in Resources */ = {isa = PBXBuildFile; fileRef = 42B5396F1A304ACA0064A566 /* 4View2.png */; };
 		42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3D1A03593A0070E2DD /* backWhite.png */; };
 		42C34A401A042D220070E2DD /* circleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C34A3F1A042D220070E2DD /* circleButton.png */; };
 		42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */; };
@@ -73,6 +87,20 @@
 		4221E5AF1A069B5300D81918 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		42B2D52E1A0C95AF00314779 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		42B2D5301A0CA31E00314779 /* PassageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassageViewController.swift; sourceTree = "<group>"; };
+		42B539601A304A0E0064A566 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		42B539631A304ACA0064A566 /* 1View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 1View.xib; sourceTree = "<group>"; };
+		42B539641A304ACA0064A566 /* 1View1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1View1.png; sourceTree = "<group>"; };
+		42B539651A304ACA0064A566 /* 1View2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1View2.png; sourceTree = "<group>"; };
+		42B539661A304ACA0064A566 /* 1View3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1View3.png; sourceTree = "<group>"; };
+		42B539671A304ACA0064A566 /* 2View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 2View.xib; sourceTree = "<group>"; };
+		42B539681A304ACA0064A566 /* 2View1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2View1.png; sourceTree = "<group>"; };
+		42B539691A304ACA0064A566 /* 2View2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2View2.png; sourceTree = "<group>"; };
+		42B5396A1A304ACA0064A566 /* 3View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 3View.xib; sourceTree = "<group>"; };
+		42B5396B1A304ACA0064A566 /* 3View1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3View1.png; sourceTree = "<group>"; };
+		42B5396C1A304ACA0064A566 /* 3View2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3View2.png; sourceTree = "<group>"; };
+		42B5396D1A304ACA0064A566 /* 4View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = 4View.xib; sourceTree = "<group>"; };
+		42B5396E1A304ACA0064A566 /* 4View1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4View1.png; sourceTree = "<group>"; };
+		42B5396F1A304ACA0064A566 /* 4View2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4View2.png; sourceTree = "<group>"; };
 		42C34A3D1A03593A0070E2DD /* backWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backWhite.png; sourceTree = "<group>"; };
 		42C34A3F1A042D220070E2DD /* circleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = circleButton.png; path = Images/circleButton.png; sourceTree = "<group>"; };
 		42C34A4B1A04698F0070E2DD /* ForgotPassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +165,27 @@
 			name = TakeTest;
 			sourceTree = "<group>";
 		};
+		42B539621A304A7F0064A566 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				42B539601A304A0E0064A566 /* IntroViewController.swift */,
+				42B539631A304ACA0064A566 /* 1View.xib */,
+				42B539641A304ACA0064A566 /* 1View1.png */,
+				42B539651A304ACA0064A566 /* 1View2.png */,
+				42B539661A304ACA0064A566 /* 1View3.png */,
+				42B539671A304ACA0064A566 /* 2View.xib */,
+				42B539681A304ACA0064A566 /* 2View1.png */,
+				42B539691A304ACA0064A566 /* 2View2.png */,
+				42B5396A1A304ACA0064A566 /* 3View.xib */,
+				42B5396B1A304ACA0064A566 /* 3View1.png */,
+				42B5396C1A304ACA0064A566 /* 3View2.png */,
+				42B5396D1A304ACA0064A566 /* 4View.xib */,
+				42B5396E1A304ACA0064A566 /* 4View1.png */,
+				42B5396F1A304ACA0064A566 /* 4View2.png */,
+			);
+			name = Intro;
+			sourceTree = "<group>";
+		};
 		42C5216419D3E40F0036E862 = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +215,7 @@
 				4202B9A71A088238009393EB /* GenerateContentForTest.swift */,
 				4202B9AA1A08ADEC009393EB /* SmoothLineView.h */,
 				4202B9AB1A08ADEC009393EB /* SmoothLineView.m */,
+				42B539621A304A7F0064A566 /* Intro */,
 				42088F8B1A06BFB60079AEBB /* TakeTest */,
 				42C9EFE71A02F84900617E45 /* MainView */,
 				42C5217619D3E40F0036E862 /* Main.storyboard */,
@@ -313,21 +363,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				42C9EFEF1A02FF3300617E45 /* Chapters.plist in Resources */,
+				42B5397B1A304ACA0064A566 /* 4View1.png in Resources */,
 				42C9EFE61A02CD7600617E45 /* triangularButton.png in Resources */,
+				42B539711A304ACA0064A566 /* 1View1.png in Resources */,
+				42B539751A304ACA0064A566 /* 2View1.png in Resources */,
+				42B539771A304ACA0064A566 /* 3View.xib in Resources */,
 				42C5219719D49AF40036E862 /* sectionInfoView.xib in Resources */,
+				42B539731A304ACA0064A566 /* 1View3.png in Resources */,
 				4202B9AE1A094A57009393EB /* circleButtonW.png in Resources */,
 				42D9776119FC682E000D5C73 /* HACKer.png in Resources */,
 				4202B9B11A0B376A009393EB /* hand.png in Resources */,
+				42B5397A1A304ACA0064A566 /* 4View.xib in Resources */,
 				42C5217819D3E40F0036E862 /* Main.storyboard in Resources */,
+				42B539701A304ACA0064A566 /* 1View.xib in Resources */,
 				42088F8A1A06B3980079AEBB /* 2014May4.plist in Resources */,
+				42B539791A304ACA0064A566 /* 3View2.png in Resources */,
+				42B539781A304ACA0064A566 /* 3View1.png in Resources */,
 				42C34A401A042D220070E2DD /* circleButton.png in Resources */,
 				4202B9B21A0B376A009393EB /* pen.png in Resources */,
 				42C34A3E1A03593A0070E2DD /* backWhite.png in Resources */,
+				42B539721A304ACA0064A566 /* 1View2.png in Resources */,
 				42C9EFE41A02CA8100617E45 /* whiteslide.png in Resources */,
 				882627EC1A09C58800655451 /* titleline.png in Resources */,
+				42B5397C1A304ACA0064A566 /* 4View2.png in Resources */,
 				42C5219319D3EE970036E862 /* background.jpg in Resources */,
 				882627EA1A09BA8600655451 /* line.png in Resources */,
+				42B539741A304ACA0064A566 /* 2View.xib in Resources */,
 				42C5217D19D3E40F0036E862 /* LaunchScreen.xib in Resources */,
+				42B539761A304ACA0064A566 /* 2View2.png in Resources */,
 				42C9EFE21A02C68E00617E45 /* more.png in Resources */,
 				42C5217A19D3E40F0036E862 /* Images.xcassets in Resources */,
 			);
@@ -354,6 +417,7 @@
 				42C34A4C1A04698F0070E2DD /* ForgotPassViewController.swift in Sources */,
 				4221E5B01A069B5300D81918 /* MenuTableViewController.swift in Sources */,
 				42C5217319D3E40F0036E862 /* AppDelegate.swift in Sources */,
+				42B539611A304A0E0064A566 /* IntroViewController.swift in Sources */,
 				4202B9A21A087E02009393EB /* ContentViewController.swift in Sources */,
 				4202B9A41A087E0F009393EB /* DraggerViewController.swift in Sources */,
 				42B2D5311A0CA31E00314779 /* PassageViewController.swift in Sources */,
@@ -491,7 +555,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -508,7 +572,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = NEWSATHacker/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

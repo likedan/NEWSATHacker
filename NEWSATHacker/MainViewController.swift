@@ -26,6 +26,8 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
     
     @IBOutlet var returnToCenter : UIButton!
 
+    var intro : UIViewController!
+
     
     var isToTop = true
     
@@ -39,10 +41,36 @@ class MainViewController: UIViewController, UIScrollViewDelegate{
         
         self.addShadow(main)
         
-        
+        intro = self.storyboard!.instantiateViewControllerWithIdentifier("intro")! as UIViewController
+        self.displayContentController(intro)
         //Do any additional setup after loading the view.
         //self.view.backgroundColor = UIColor(red: 240.0/255, green: 242.0/255, blue: 245.0/255, alpha: 1)
         
+    }
+    
+    func displayContentController(content: UIViewController){
+        self.addChildViewController(content)
+        content.didMoveToParentViewController(self)          // 3
+        self.view.addSubview(content.view)
+
+    }
+    
+    func hideIntro(){
+        
+        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+            
+            self.intro.view.alpha = 0
+            
+            }
+            , completion: {
+                (value: Bool) in
+                self.hideContentController(self.intro)
+        })
+    }
+    
+    func hideContentController(content: UIViewController){
+        content.view.removeFromSuperview()
+        content.removeFromParentViewController()
     }
     
     func addShadow(shadow: UIView){

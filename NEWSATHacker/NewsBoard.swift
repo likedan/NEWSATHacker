@@ -28,7 +28,7 @@ class NewsBoard: UIViewController {
     
     func displayView(identifier: String){
         
-        UIView.animateWithDuration(0.5, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
             
             self.loginContent.view.alpha = 0
             
@@ -58,8 +58,6 @@ class NewsBoard: UIViewController {
                 
         })
 
-        var gestureReco = UITapGestureRecognizer(target: self.childViewControllers[0], action: "backgroundTapped:")
-        content.view.addGestureRecognizer(gestureReco)
     }
 
     func hideContentController(content: UIViewController){

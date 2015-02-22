@@ -51,7 +51,8 @@ class TakeTestViewController: UIViewController {
         var str: String = (sectionInfo[1] as NSString).substringToIndex(1) as String
         let generator: GenerateContentForTest = GenerateContentForTest()
         
-        testData = DataManager.getASectionTest(sectionInfo[0] as String, month: sectionInfo[1] as String, section: (sectionInfo[2] as NSString).substringToIndex(1) as String)
+        //testData = DataManager.getASectionTest(sectionInfo[0] as String, month: sectionInfo[1] as String, section: (sectionInfo[2] as NSString).substringToIndex(1) as String)
+        testData = DataManager.getASectionTest("2014", month: "May", section: "4")
         
         views = generator.generateContent(testData)
         
